@@ -1,0 +1,136 @@
+/* Vizsla OS — public site. One stylesheet, no frameworks, no trackers.
+   Type seats per the house style guide (§4): Fraunces = display,
+   Newsreader = reading, Inter = UI. Fraunces + Newsreader are vendored
+   as WOFF2 beside this file (SIL OFL 1.1; license texts in assets/fonts/)
+   — self-hosted, so nothing on this page phones home. Inter falls back
+   to the visitor's local UI faces. */
+@font-face{
+  font-family:"Fraunces"; src:url("assets/fonts/Fraunces.woff2") format("woff2");
+  font-weight:400 900; font-style:normal; font-display:swap;
+}
+@font-face{
+  font-family:"Newsreader"; src:url("assets/fonts/Newsreader.woff2") format("woff2");
+  font-weight:400 700; font-style:normal; font-display:swap;
+}
+
+:root{
+  --bg:#faf6ef; --bg-raise:#fffdf8; --ink:#26201a; --ink-muted:#5d5347;
+  --russet:#8c3b12; --russet-deep:#6f2d0c; --line:#e3d9c8;
+  --chip:#f3ead9; --ok:#3f6212;
+  --font-display:"Fraunces","Iowan Old Style",Georgia,serif;
+  --font-reading:"Newsreader","Iowan Old Style",Georgia,serif;
+  --font-ui:"Inter",system-ui,-apple-system,"Segoe UI",sans-serif;
+}
+@media (prefers-color-scheme:dark){
+  :root{
+    --bg:#1c1611; --bg-raise:#251d16; --ink:#f2e9dc; --ink-muted:#c4b6a2;
+    --russet:#e59a5f; --russet-deep:#eda96f; --line:#3e3226;
+    --chip:#2e251b; --ok:#a3c96b;
+  }
+}
+*{box-sizing:border-box}
+html{font-size:100%}
+body{
+  margin:0; background:var(--bg); color:var(--ink);
+  font-family:var(--font-ui); font-size:1.0625rem; line-height:1.55;
+}
+a{color:var(--russet); text-underline-offset:.18em}
+a:focus-visible,button:focus-visible{outline:3px solid var(--russet); outline-offset:2px}
+.skip{position:absolute; left:-999px; top:0; background:var(--russet); color:#fff; padding:.6rem 1rem; z-index:9}
+.skip:focus{left:0}
+.wrap{max-width:72rem; margin:0 auto; padding:0 1.25rem}
+
+/* header */
+header.site{
+  border-bottom:1px solid var(--line);
+  position:sticky; top:0; background:var(--bg); z-index:5;
+}
+header.site .wrap{display:flex; align-items:center; gap:1rem; flex-wrap:wrap; padding-top:.7rem; padding-bottom:.7rem}
+.brand{display:flex; align-items:center; gap:.65rem; text-decoration:none; color:var(--ink)}
+.brand svg{flex:none}
+.wordmark{font-family:var(--font-display); font-weight:700; font-size:1.55rem; letter-spacing:.14em}
+nav.main{margin-left:auto}
+nav.main ul{display:flex; gap:.25rem; list-style:none; margin:0; padding:0; flex-wrap:wrap}
+nav.main a{
+  display:inline-block; padding:.55rem .8rem; border-radius:999px;
+  text-decoration:none; color:var(--ink); font-size:.98rem;
+}
+nav.main a:hover{background:var(--chip)}
+nav.main a[aria-current="page"]{background:var(--russet); color:#fff}
+@media (prefers-color-scheme:dark){ nav.main a[aria-current="page"]{color:#241708} }
+
+/* hero */
+.hero{padding:3.2rem 0 1.6rem}
+.eyebrow{
+  font-size:.82rem; letter-spacing:.16em; text-transform:uppercase;
+  color:var(--russet); font-weight:600; margin:0 0 .8rem;
+}
+h1{
+  font-family:var(--font-display); font-weight:650;
+  font-size:clamp(2.3rem,6vw,4rem); line-height:1.06; margin:0 0 1rem;
+}
+h1 .accent{color:var(--russet)}
+.lede{font-family:var(--font-reading); font-size:clamp(1.15rem,2.4vw,1.4rem); line-height:1.5; max-width:44rem; margin:0 0 1.4rem}
+.statusline{
+  display:inline-block; background:var(--chip); border:1px solid var(--line);
+  border-radius:999px; padding:.45rem 1rem; font-size:.95rem; margin:0 0 1rem;
+}
+.statusline strong{color:var(--russet-deep)}
+@media (prefers-color-scheme:dark){ .statusline strong{color:var(--russet)} }
+
+/* prose pages */
+.prose{font-family:var(--font-reading); font-size:1.14rem; line-height:1.62; max-width:46rem}
+.prose h2{font-family:var(--font-display); font-size:1.7rem; line-height:1.2; margin:2.2rem 0 .7rem}
+.prose p{margin:.7rem 0}
+.prose ul{margin:.7rem 0; padding-left:1.3rem}
+.prose li{margin:.35rem 0}
+.prose .tldr{
+  font-size:1.22rem; border-left:4px solid var(--russet);
+  padding:.2rem 0 .2rem 1rem; margin:1.2rem 0;
+}
+.pagehead{padding:2.6rem 0 .4rem}
+.pagehead h1{font-size:clamp(2rem,5vw,3.1rem)}
+
+/* cards + roster */
+.cards{display:grid; grid-template-columns:repeat(auto-fit,minmax(15.5rem,1fr)); gap:1rem; margin:1.4rem 0 2.4rem}
+.card{background:var(--bg-raise); border:1px solid var(--line); border-radius:1rem; padding:1.1rem 1.2rem}
+.card h3{font-family:var(--font-display); margin:.1rem 0 .45rem; font-size:1.25rem}
+.card p{margin:0; color:var(--ink-muted); font-size:.99rem}
+section.block{padding:1.6rem 0 .4rem}
+section.block>h2{font-family:var(--font-display); font-size:1.85rem; margin:0 0 .5rem}
+section.block>p{max-width:46rem; color:var(--ink-muted)}
+.roster{list-style:none; margin:1rem 0 2rem; padding:0; display:grid; grid-template-columns:repeat(auto-fill,minmax(19rem,1fr)); gap:.55rem 1.6rem}
+.roster li{border-top:1px solid var(--line); padding:.55rem 0}
+.roster .nm{font-weight:650}
+.roster .ver{color:var(--ink-muted); font-size:.86rem; margin-left:.4rem; font-variant-numeric:tabular-nums}
+.roster .ds{display:block; color:var(--ink-muted); font-size:.95rem; margin-top:.1rem}
+
+/* figures */
+figure.shot{margin:1.8rem 0; }
+figure.shot img{width:100%; height:auto; border:1px solid var(--line); border-radius:1rem; display:block}
+figure.shot figcaption{color:var(--ink-muted); font-size:.92rem; margin-top:.5rem}
+
+/* principles list */
+.principles{list-style:none; padding:0; margin:1.2rem 0 2rem; display:grid; gap:1rem}
+.principles li{background:var(--bg-raise); border:1px solid var(--line); border-radius:1rem; padding:1.05rem 1.2rem; max-width:52rem}
+.principles h3{font-family:var(--font-display); margin:0 0 .35rem; font-size:1.3rem}
+.principles p{margin:0; color:var(--ink-muted)}
+blockquote.gentle{
+  font-family:var(--font-reading); font-size:1.15rem; font-style:italic;
+  border-left:4px solid var(--russet); margin:1.2rem 0; padding:.2rem 0 .2rem 1rem; max-width:44rem;
+}
+
+/* footer */
+footer.site{border-top:1px solid var(--line); margin-top:3rem; padding:1.6rem 0 2.4rem; color:var(--ink-muted); font-size:.95rem}
+footer.site .cols{display:flex; gap:2.5rem; flex-wrap:wrap}
+footer.site a{color:var(--ink-muted)}
+.fineprint{margin-top:1.1rem; font-size:.86rem}
+
+@media (max-width:42rem){
+  .hero{padding-top:2.1rem}
+  nav.main{margin-left:0}
+  header.site .wrap{gap:.6rem}
+}
+@media (prefers-reduced-motion:reduce){
+  *{transition:none !important; animation:none !important}
+}

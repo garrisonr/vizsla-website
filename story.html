@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>The Story — Vizsla OS</title>
+<meta name="description" content="How Vizsla OS was made: in weeks, by one man in Florida and an AI he directs — and an honest account of vibe coding, the man behind it, and why the system is deliberately kind.">
+<link rel="stylesheet" href="style.css">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 48 48'%3E%3Crect width='48' height='48' rx='11' fill='%238c3b12'/%3E%3Cpath d='M15 9l9 3 5 8 4 13-6-2-3 8-4-7-7-4-2-11z' fill='%23faf6ef'/%3E%3C/svg%3E">
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="site">
+  <div class="wrap">
+    <a class="brand" href="index.html" aria-label="Vizsla OS — home">
+      <svg width="38" height="38" viewBox="0 0 48 48" aria-hidden="true"><rect width="48" height="48" rx="11" fill="#8c3b12"/><path d="M15 9l9 3 5 8 4 13-6-2-3 8-4-7-7-4-2-11z" fill="#faf6ef"/></svg>
+      <span class="wordmark">VIZSLA</span>
+    </a>
+    <nav class="main" aria-label="Main">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="story.html" aria-current="page">The Story</a></li>
+        <li><a href="inside.html">What&rsquo;s inside</a></li>
+        <li><a href="kindness.html">Kindness &amp; privacy</a></li>
+        <li><a href="feedback.html">Feedback</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main id="main" class="wrap">
+  <div class="pagehead">
+    <p class="eyebrow">The Doctrine Library</p>
+    <h1>The Story of Vizsla</h1>
+  </div>
+
+  <article class="prose">
+    <p class="tldr">Vizsla OS was built in a matter of weeks by one man in Florida and an AI he directs — talking, deciding, and arguing in plain language, often sixteen hours a day. It takes the best ideas other systems had, adds some none of them have, and is deliberately different in the ways that matter: not just private, but kind. It is a labor of love, and it is not finished listening.</p>
+
+    <h2>How you&rsquo;ll notice it</h2>
+    <ul>
+      <li>Nothing in Vizsla requires an account. Apps may offer one; the system never demands one.</li>
+      <li>Updates never lock you out of your own machine in the middle of your work. They wait until you&rsquo;re away, the machine is plugged in, and the network is unmetered — and if you say &ldquo;not yet,&rdquo; they say &ldquo;fair enough&rdquo; and tell you what they&rsquo;re waiting for, in plain words.</li>
+      <li>If an app disappears and the system doesn&rsquo;t know why, it asks — once, gently: &ldquo;hi it&rsquo;s me. Sorry to bother but I&rsquo;m not sure if you want to uninstall this. Please let me know if you want it reinstalled or not. No worries either way.&rdquo; If you removed it on purpose, it never asks at all.</li>
+      <li>The machine manages itself across the whole house. Software is built once and lands, verified, on every computer that can run it. Decisions that need a human collect in one calm inbox instead of ambushing you app by app.</li>
+      <li>It is one system in every shape — desktop, tablet, TV, console, phone, dash — the same apps and files, rearranged, never reduced.</li>
+    </ul>
+
+    <h2>How it was made</h2>
+    <p>Vizsla was not written by a company, a team, or a foundation. It was built in weeks — the record runs from late September to late October 2026 — by one person and an AI, working together in long daily sessions that often ran sixteen hours or more, including middle-of-the-night emergency reboots across the three computers that now run it. That is the honest version, and it doesn&rsquo;t need inflating: in that span the work produced a working system of dozens of apps, a design language, an installer, and a fleet of three machines that keep themselves in sync — work that used to be measured in team-years.</p>
+    <p>The method matters more than the hours. One human supplies the vision, the judgment, the taste, and the final word. The AI supplies velocity: drafting, building, testing, and checking at a speed no single pair of hands has. Neither half works alone. Software this considered doesn&rsquo;t come from a person typing for a decade, and it doesn&rsquo;t come from a machine left unsupervised either. It comes from the conversation — thousands of decisions, made out loud, on the record, one at a time.</p>
+
+    <h2>The man behind it</h2>
+    <p>Richard Garrison lives in Leesburg, Florida. He was raised in Columbus Junction, Iowa, reads fast, and writes short. He holds a BA in English and Anthropology from the University of Iowa, and he spent his career in human resources and healthcare operations — most recently as a Senior HR Coordinator in Dade City, Florida — which is to say he spent years watching ordinary people fight ordinary software, and learning exactly where it hurts them.</p>
+    <p>He has ADHD, and he will tell you himself what that means here: every project arrives in his head as a whole little world, already finished, and building is the act of dragging one world at a time into reality before the next one crowds in. Vizsla is shaped by that mind on purpose. It ranks what needs you by stakes, not by noise. It never demands, nags, or pulses for attention. It keeps ten thousand ideas from getting lost by writing them down and building them in the open. The system a scattered, relentless person needed turned out to be the system that is calm for everybody.</p>
+    <p>He shares the house — and the testing — with his partner, Paul, and a Rat Terrier named Mandy, who has strong opinions about none of this and supervises anyway.</p>
+
+    <h2>Vibe coding, honestly</h2>
+    <p>What built Vizsla has a name, and the name currently has a bad reputation: vibe coding. It means directing AI systems in natural language — describing what you want, judging what comes back, steering — instead of writing every line by hand. Let&rsquo;s be fair to the reputation first. The practice is in its infancy. Used carelessly, it produces slop: code nobody understands, features that demo well and die in production, and real security holes left by people who never looked. The slur exists for a reason, and anyone who tells you otherwise is selling something.</p>
+    <p>Now the other half, which this project exists to prove. Vibe coding puts development speed on a curve software has never had — not a little faster, a different kind of fast — because the bottleneck moves from typing to thinking. And here is the part the critics miss: security and quality assurance get better, not worse, <em>when the speed is spent on them.</em> The hours a solo developer never had for a second review pass, a test suite, a security audit, an install verified hash-by-hash on every machine — the speed makes those affordable. Vizsla&rsquo;s whole working method is the exhibit: every app specified before it is built, every claim checked against the machine, every install proven, every failure written down and turned into a rule so it happens once. A lone careful human used to have to choose between shipping and checking. That choice is what is actually ending.</p>
+    <p>The honest summary: the infancy is real, the slop is real, and the future is still this. Judgment was always the scarce ingredient in software. Now it&rsquo;s the only one you have to bring.</p>
+
+    <h2>Not a derivative</h2>
+    <p>Vizsla stands on good ideas and says so — it borrows the best of what other systems figured out, from calm notification manners to a search that runs on your own machine. But several things in it have not appeared in any other operating system:</p>
+    <ul>
+      <li><strong>A fleet that installs itself.</strong> One catalog is the truth; every machine in the house is kept to it automatically, each install verified, each drift noticed.</li>
+      <li><strong>Pass or Paws.</strong> Every decision the system needs from its human — every one — collects in a single decision inbox, to be answered in one sitting, in plain words. No other system asks its owner this politely, or this rarely.</li>
+      <li><strong>A color law you can measure.</strong> Every app&rsquo;s color holds a recorded seat in one family registry, kept a measurable distance from every other seat — no clashes, ever, enforced by the build itself.</li>
+      <li><strong>The Baking Hour.</strong> A new Vizsla machine sits and gestates for at least an hour after install — indexing, warming, pre-fetching — so it is fabulous the first time you touch it, not the fiftieth.</li>
+      <li><strong>Triage by stakes.</strong> Your day surface ranks what needs you by what it costs you, with the remedy attached — not by which app shouted loudest.</li>
+      <li><strong>One system, every shape</strong> — the same system and apps across desktop, tablet, TV, console, phone, and dash, ready before the hardware is.</li>
+    </ul>
+    <p>And underneath the features, the deliberate difference: <strong>kindness as a design property.</strong> Not just privacy — though your files live on your machines, no account is required, and a &ldquo;no&rdquo; from you is recorded and never re-asked. Kindness in the small mechanics: an update that won&rsquo;t hijack your evening, an alert that apologizes for existing, a button that is calm instead of demanding. Operating systems have competed on power and on polish for forty years. Nobody competed on being kind to the person at the keyboard. That is the whole idea here.</p>
+
+    <h2>A smidge of history</h2>
+    <p>Every operating system you have ever used was built by hundreds or thousands of people over years, inside companies that could afford both. The personal computer&rsquo;s founding myth — one person, a garage, a machine built out of love for what computers could be — quietly became impossible as systems grew. Vizsla is a bet that it just became possible again: that the garage is back, it seats one human and one AI, and what comes out of it can stand next to the big systems on the merits — different where it counts, honest about where it borrows, and built by someone who has to live in it every day.</p>
+
+    <h2>Deeper</h2>
+    <p>If you want the receipts, this manual is full of them: the doctrine topics on this shelf are the rules the system was actually built under — no means no, local first, answers with receipts, buttons are buttons. The story above is the short version of those rules with a face on it.</p>
+    <p>This is truly a labor of love, built by a man who needed it and an AI that argues with him when he&rsquo;s wrong. It will get better the way it got built: out loud, on the record, one decision at a time. So — tell us what would make it better. Constructive feedback is not a suggestion box here; it is the development process. If something is clumsy, say so. If something is missing, name it. The next version of this page will be written the same way this one was: by listening, and then building what we heard.</p>
+  </article>
+</main>
+
+<footer class="site">
+  <div class="wrap">
+    <div class="cols">
+      <div>
+        <strong>Vizsla OS</strong><br>
+        Built in Leesburg, Florida, by Richard Garrison<br>
+        and the AI he directs.
+      </div>
+      <div>
+        <a href="story.html">The Story</a><br>
+        <a href="inside.html">What&rsquo;s inside</a><br>
+        <a href="kindness.html">Kindness &amp; privacy</a><br>
+        <a href="feedback.html">Feedback</a>
+      </div>
+      <div>
+        In active development.<br>
+        No download yet &mdash; honestly.
+      </div>
+    </div>
+    <p class="fineprint">This text is the canonical &ldquo;Story of Vizsla&rdquo; &mdash; the same words that live
+    in Vizsla Help&rsquo;s Doctrine Library. This site sets no cookies and runs no trackers.</p>
+  </div>
+</footer>
+</body>
+</html>
