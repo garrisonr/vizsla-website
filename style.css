@@ -47,7 +47,7 @@ header.site{
 }
 header.site .wrap{display:flex; align-items:center; gap:1rem; flex-wrap:wrap; padding-top:.7rem; padding-bottom:.7rem}
 .brand{display:flex; align-items:center; gap:.65rem; text-decoration:none; color:var(--ink)}
-.brand svg{flex:none}
+.brand img{flex:none; display:block; border-radius:23%}
 .wordmark{font-family:var(--font-display); font-weight:700; font-size:1.55rem; letter-spacing:.14em}
 nav.main{margin-left:auto}
 nav.main ul{display:flex; gap:.25rem; list-style:none; margin:0; padding:0; flex-wrap:wrap}
