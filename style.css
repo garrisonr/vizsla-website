@@ -120,6 +120,38 @@ blockquote.gentle{
   border-left:4px solid var(--russet); margin:1.2rem 0; padding:.2rem 0 .2rem 1rem; max-width:44rem;
 }
 
+/* pitch + gallery + spotlight + savings (REFRESH 2026-10-27) */
+.gallery{display:grid; grid-template-columns:repeat(auto-fit,minmax(16rem,1fr)); gap:1.1rem; margin:1.4rem 0 2.2rem}
+.gallery figure{margin:0}
+.gallery img{width:100%; height:auto; border:1px solid var(--line); border-radius:1rem; display:block}
+.gallery figcaption{color:var(--ink-muted); font-size:.9rem; margin-top:.45rem}
+.gallery figcaption strong{color:var(--ink)}
+.spotlight{
+  background:var(--bg-raise); border:1px solid var(--line); border-radius:1rem;
+  padding:1.3rem 1.4rem; margin:1.6rem 0 2.2rem; max-width:52rem;
+}
+.spotlight h3{font-family:var(--font-display); font-size:1.45rem; margin:.1rem 0 .5rem}
+.spotlight p{margin:.45rem 0; color:var(--ink-muted)}
+.spotlight p strong{color:var(--ink)}
+.btn{
+  display:inline-block; background:var(--russet); color:#fff; text-decoration:none;
+  font-weight:650; padding:.65rem 1.25rem; border-radius:999px; margin:.5rem .6rem .3rem 0;
+}
+.btn:hover{background:var(--russet-deep)}
+@media (prefers-color-scheme:dark){ .btn{color:#241708} .btn:hover{color:#241708} }
+table.savings{border-collapse:collapse; width:100%; margin:1.2rem 0 1.6rem; font-size:1rem}
+table.savings th, table.savings td{border-top:1px solid var(--line); padding:.6rem .7rem; text-align:left; vertical-align:top}
+table.savings thead th{font-family:var(--font-display); font-size:1.05rem; border-top:none}
+table.savings td.price, table.savings th.price{text-align:right; white-space:nowrap; font-variant-numeric:tabular-nums}
+table.savings tfoot td{font-weight:700; border-top:2px solid var(--russet)}
+.notes{color:var(--ink-muted); font-size:.95rem; max-width:46rem}
+.notes li{margin:.3rem 0}
+.refcode{
+  font-family:ui-monospace,"SF Mono",Menlo,Consolas,monospace; font-weight:700;
+  background:var(--chip); border:1px solid var(--line); border-radius:.5rem; padding:.1rem .5rem;
+}
+.contactline{margin-top:.4rem}
+
 /* footer */
 footer.site{border-top:1px solid var(--line); margin-top:3rem; padding:1.6rem 0 2.4rem; color:var(--ink-muted); font-size:.95rem}
 footer.site .cols{display:flex; gap:2.5rem; flex-wrap:wrap}
@@ -130,6 +162,14 @@ footer.site a{color:var(--ink-muted)}
   .hero{padding-top:2.1rem}
   nav.main{margin-left:0}
   header.site .wrap{gap:.6rem}
+  /* savings tables restack: subscription, the Vizsla way, price — one column */
+  table.savings thead{display:none}
+  table.savings, table.savings tbody, table.savings tfoot,
+  table.savings tr, table.savings td{display:block; width:100%}
+  table.savings tr{border-top:1px solid var(--line); padding:.45rem 0}
+  table.savings td{border-top:none; padding:.2rem .7rem}
+  table.savings td.price{text-align:left; font-weight:700}
+  table.savings tfoot td{border-top:none}
 }
 @media (prefers-reduced-motion:reduce){
   *{transition:none !important; animation:none !important}
