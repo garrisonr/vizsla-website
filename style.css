@@ -206,3 +206,20 @@ footer.site a{color:var(--ink-muted)}
   font-family:var(--font-reading); font-size:1.08rem; line-height:1.6;
   max-width:46rem; margin:.4rem 0 1.8rem;
 }
+
+/* why page wave 2 — Fable Files block + the HR folder list (WHY2
+   2026-10-28). Pure suffix append: stripping this block reproduces the
+   wave-1 published stylesheet byte for byte. House tokens only. */
+.fableblock{padding-top:2.2rem}
+.fableintro{
+  font-family:var(--font-reading); font-size:1.14rem; line-height:1.55;
+  color:var(--ink-muted); max-width:46rem; margin:0;
+}
+.fableblock .card .does{color:var(--ink); margin:0 0 .55rem}
+.fableblock .card .beats{color:var(--ink-muted); margin:0}
+.fableblock .card .beats strong{color:var(--russet-deep)}
+@media (prefers-color-scheme:dark){ .fableblock .card .beats strong{color:var(--russet)} }
+.folderlist{
+  font-family:var(--font-reading); font-size:1.03rem; line-height:1.65;
+  color:var(--ink); margin:0 0 .55rem;
+}
