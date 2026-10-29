@@ -223,3 +223,13 @@ footer.site a{color:var(--ink-muted)}
   font-family:var(--font-reading); font-size:1.03rem; line-height:1.65;
   color:var(--ink); margin:0 0 .55rem;
 }
+
+/* The Shelf page masthead (GLOW-UP 2026-10-29). Pure suffix append:
+   stripping this block reproduces the WHY3 published stylesheet byte
+   for byte. House tokens only. */
+.shelfhead{display:flex; align-items:center; gap:1.1rem; margin:0 0 .6rem}
+.shelfhead img{
+  width:76px; height:76px; flex:none; display:block;
+  border:1px solid var(--line); border-radius:22%; background:var(--bg-raise);
+}
+.shelfhead .eyebrow{margin:0}
