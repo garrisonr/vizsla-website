@@ -6,7 +6,7 @@
 <title>Vizsla OS — one system, every shape. Private by design, kind on purpose.</title>
 <meta name="description" content="Vizsla OS is one system in every shape — desktop, tablet, TV, console, phone, dash — developed over months by one man and the AI he directs. Nothing requires an account.">
 <link rel="stylesheet" href="style.css">
-<script>if (new URLSearchParams(location.search).get('still') === 'chaos') { document.documentElement.classList.add('stillchaos-doc'); }</script>
+<script>(function(){var s=new URLSearchParams(location.search).get('still');if(s==='motion'){document.documentElement.classList.add('stillmotion-doc');}else if(s==='calm'){document.documentElement.classList.add('stillcalm-doc');}else if(!window.matchMedia('(prefers-reduced-motion: reduce)').matches){document.documentElement.classList.add('js-arc');}})();</script>
 <link rel="icon" href="assets/favicon.ico" sizes="any">
 <link rel="icon" type="image/png" href="assets/favicon.png">
 </head>
@@ -18,7 +18,7 @@
       <img src="assets/vizsla-mark.jpg" width="38" height="38" alt="">
       <span class="wordmark">VIZSLA</span>
     </a>
-    <nav class="main" aria-label="Main">
+    <nav class="main navdesk" aria-label="Main">
       <ul>
         <li><a href="index.html" aria-current="page">Home</a></li>
         <li><a href="why.html">Why Vizsla?</a></li>
@@ -32,54 +32,62 @@
         <li><a href="feedback.html">Get involved</a></li>
       </ul>
     </nav>
+    <details class="navmob">
+      <summary>Menu</summary>
+      <nav class="main mainmob" aria-label="Main">
+        <ul>
+        <li><a href="index.html" aria-current="page">Home</a></li>
+        <li><a href="why.html">Why Vizsla?</a></li>
+        <li><a href="story.html">The Story</a></li>
+        <li><a href="dogs.html">Meet our dogs</a></li>
+        <li><a href="inside.html">What&rsquo;s inside</a></li>
+        <li><a href="shelf.html">The Shelf</a></li>
+        <li><a href="install.html">Install &amp; Ferry</a></li>
+        <li><a href="savings.html">Savings</a></li>
+        <li><a href="kindness.html">Kindness &amp; privacy</a></li>
+        <li><a href="feedback.html">Get involved</a></li>
+        </ul>
+      </nav>
+    </details>
   </div>
 </header>
 
 <main id="main">
-  <section class="stage" id="stage" aria-label="Vizsla OS — everything flying at you, then calm">
-    <div class="calmglow" aria-hidden="true"></div>
-
-    <div class="chaoslayer" id="chaoslayer" aria-hidden="true">
-      <div class="fcard k-paper" style="--x:5%;--y:8%;--r:-7deg;--s:1"><strong>FORM 27-B</strong><span class="sig">SIGN HERE</span><span class="lines"><i style="width:92%"></i><i style="width:78%"></i><i style="width:85%"></i></span></div>
-      <div class="fcard k-mail" style="--x:29%;--y:4%;--r:5deg;--s:.95"><span class="from">Billing Department</span><span class="subj">Your receipt — and three upsells</span><span class="lines"><i style="width:88%"></i><i style="width:64%"></i></span></div>
-      <div class="fcard k-ad" style="--x:54%;--y:10%;--r:-4deg;--s:1.05"><p class="banner">YOUR TV IS WATCHING YOU BACK!<span class="burst">SHOCKING</span></p><p class="sub">It samples what&rsquo;s on your screen — and reports it.</p></div>
-      <div class="fcard k-text" style="--x:79%;--y:6%;--r:8deg;--s:.9"><p>did you see this??</p><p class="dim">text &middot; just now</p></div>
-      <div class="fcard k-social" style="--x:12%;--y:36%;--r:6deg;--s:1"><p class="who"><span class="dot"></span><strong>Your feed</strong></p><p>You have <strong>47 new notifications</strong></p></div>
-      <div class="fcard k-paper" style="--x:38%;--y:32%;--r:-9deg;--s:.92"><strong>TAX NOTICE</strong><span class="sig">ACTION REQUIRED</span><span class="lines"><i style="width:90%"></i><i style="width:70%"></i><i style="width:82%"></i></span></div>
-      <div class="fcard k-ad" style="--x:64%;--y:34%;--r:3deg;--s:1"><p class="banner">DATA BROKERS SELL YOUR LOCATION<span class="burst">EXPOSED</span></p><p class="sub">Pennies a head. No permission slip.</p></div>
-      <div class="fcard k-mail" style="--x:85%;--y:32%;--r:-6deg;--s:.95"><span class="from">The Thread</span><span class="subj">RE: RE: RE: RE: the thing</span><span class="lines"><i style="width:80%"></i><i style="width:58%"></i></span></div>
-      <div class="fcard k-text" style="--x:22%;--y:60%;--r:-5deg;--s:.9"><p>URGENT — call me back</p><p class="dim">text &middot; 2 min ago</p></div>
-      <div class="fcard k-ad" style="--x:46%;--y:58%;--r:7deg;--s:1.02"><p class="banner">FREE APP HARVESTS YOUR CONTACTS!<span class="burst">TRUE STORY</span></p><p class="sub">Your friends&rsquo; numbers, uploaded.</p></div>
-      <div class="fcard k-paper" style="--x:71%;--y:56%;--r:-8deg;--s:.94"><strong>INSURANCE RENEWAL</strong><span class="sig">14 PAGES ENCLOSED</span><span class="lines"><i style="width:86%"></i><i style="width:74%"></i></span></div>
-      <div class="fcard k-ad" style="--x:8%;--y:76%;--r:4deg;--s:.96"><p class="banner">YOUR CAR REMEMBERS EVERY TRIP<span class="burst">REVEALED</span></p><p class="sub">And it tells. Insurers are listening.</p></div>
-      <div class="fcard k-ad" style="--x:33%;--y:80%;--r:-3deg;--s:1"><p class="banner">BILLIONS OF RECORDS LEAKED — AGAIN<span class="burst">SHOCKING</span></p><p class="sub">Names. Numbers. Addresses. Yours?</p></div>
-      <div class="fcard k-social" style="--x:58%;--y:78%;--r:6deg;--s:.92"><p class="who"><span class="dot"></span><strong>Somewhere social</strong></p><p>Someone mentioned you in a thread</p></div>
-      <div class="fcard k-ad" style="--x:82%;--y:74%;--r:-5deg;--s:.98"><p class="banner">WHILE YOU SLEEP, YOUR APPS PHONE HOME<span class="burst">CAUGHT</span></p><p class="sub">Dozens of trackers. Every night.</p></div>
-      <div class="fcard k-mail" style="--x:44%;--y:6%;--r:9deg;--s:.9"><span class="from">The Clinic</span><span class="subj">Appointment reminder — tomorrow, 9:00</span><span class="lines"><i style="width:84%"></i><i style="width:60%"></i></span></div>
+  <section class="hero2" id="hero2" aria-label="Vizsla OS — everything flying at you, then calm">
+    <div class="falllayer" id="falllayer" aria-hidden="true">
+      <div class="fcard k-paper f1"><strong>FORM 27-B</strong><span class="sig">SIGN HERE</span><span class="lines"><i style="width:92%"></i><i style="width:78%"></i><i style="width:85%"></i></span></div>
+      <div class="fcard k-ad f2"><p class="banner">YOUR TV IS WATCHING YOU BACK!<span class="burst">SHOCKING</span></p><p class="sub">It samples what&rsquo;s on your screen — and reports it.</p></div>
+      <div class="fcard k-text f3"><p>did you see this??</p><p class="dim">text &middot; just now</p></div>
+      <div class="fcard k-mail f4"><span class="from">Billing Department</span><span class="subj">Your receipt — and three upsells</span><span class="lines"><i style="width:88%"></i><i style="width:64%"></i></span></div>
+      <div class="fcard k-ad f5"><p class="banner">DATA BROKERS SELL YOUR LOCATION<span class="burst">EXPOSED</span></p><p class="sub">Pennies a head. No permission slip.</p></div>
+      <div class="fcard k-paper f6"><strong>TAX NOTICE</strong><span class="sig">ACTION REQUIRED</span><span class="lines"><i style="width:90%"></i><i style="width:70%"></i><i style="width:82%"></i></span></div>
     </div>
 
-    <div class="stagefloor">
-      <div class="rustywrap"><img class="rusty" src="assets/rusty-hero.png" width="720" height="570" alt="Rusty, the russet vizsla of Vizsla OS, walking in"></div>
-      <div class="restpile" aria-hidden="true">
+    <div class="hero2-copy">
+      <p class="eyebrow">Vizsla OS</p>
+      <h1 class="hero2-h1">One system, every shape.<br>Private by design, kind on purpose.</h1>
+      <p class="hero2-promise">Papers, mail, messages, and ads, all flying at you at once — Vizsla brings them to one calm place. That&rsquo;s the whole idea.</p>
+      <p class="hero2-status"><strong>The honest status:</strong> Vizsla OS is in active
+      development, being built in the open at home. There is no download yet &mdash;
+      when there is, it will be right here. <a href="story.html">Read how it&rsquo;s being made</a>.</p>
+      <p class="hero2-doors"><a class="btn" href="inside.html">See what&rsquo;s inside</a> <a class="btn ghost" href="story.html">Read the story</a></p>
+    </div>
+
+    <div class="floor">
+      <div class="reststack" aria-hidden="true">
         <div class="fcard k-paper rest r1"><span class="lines"><i style="width:88%"></i><i style="width:72%"></i></span></div>
         <div class="fcard k-paper rest r2"><span class="lines"><i style="width:80%"></i><i style="width:66%"></i></span></div>
         <div class="fcard k-paper rest r3"><strong>Arrival</strong><span class="sig">TODAY, IN ORDER</span></div>
+        <span class="stackshadow"></span>
+      </div>
+      <div class="rustywrap2">
+        <img class="rusty2" src="assets/rusty-hero.png" width="720" height="570" alt="Rusty, the russet vizsla of Vizsla OS, standing on the floor">
+        <span class="contactshadow" aria-hidden="true"></span>
       </div>
     </div>
-
-    <div class="calmcopy">
-      <p class="eyebrow light">Vizsla OS</p>
-      <h1>One system, <span class="accent">every shape</span>.<br>Private by design, kind on purpose.</h1>
-      <p class="promise">Papers, mail, messages, and ads, all flying at you at once — Vizsla brings them to one calm place. That&rsquo;s the whole idea.</p>
-      <p class="statusline onstage"><strong>The honest status:</strong> Vizsla OS is in active
-      development, being built in the open at home. There is no download yet &mdash;
-      when there is, it will be right here. <a href="story.html">Read how it&rsquo;s being made</a>.</p>
-      <p class="doors"><a class="btn" href="inside.html">See what&rsquo;s inside</a> <a class="btn ghost" href="story.html">Read the story</a></p>
-    </div>
-
-    <div class="stagecontrols">
-      <button type="button" class="textbtn" id="skipstorm" hidden>Skip the storm</button>
-      <button type="button" class="textbtn" id="replay" hidden>Watch it again</button>
+    <div class="herobar">
+      <button type="button" class="textbtn" id="skipstorm2" hidden>Skip the calm-down</button>
+      <button type="button" class="textbtn" id="replay2" hidden>Watch it again</button>
     </div>
   </section>
 
@@ -416,95 +424,85 @@
 
 <script>
 (function () {
-  var stage = document.getElementById('stage');
-  if (!stage) return;
-  var layer = document.getElementById('chaoslayer');
-  var cards = Array.prototype.slice.call(layer.children);
-  var rustyWrap = stage.querySelector('.rustywrap');
-  var rusty = stage.querySelector('.rusty');
-  var skipBtn = document.getElementById('skipstorm');
-  var replayBtn = document.getElementById('replay');
+  var hero = document.getElementById('hero2');
+  if (!hero) return;
+  var doc = document.documentElement;
   var still = new URLSearchParams(location.search).get('still');
-  if (still === 'chaos') { stage.classList.add('stillchaos'); return; }
+  if (still === 'motion') { hero.classList.add('stillmotion'); return; }
   if (still === 'calm') { return; }
-  if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) { return; }
 
-  var timers = [], anims = [], spawner = null, running = false;
+  /* Below-fold reveals: restrained, JS-only, off under reduced motion. */
+  var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  if (!reduce && 'IntersectionObserver' in window) {
+    var blocks = document.querySelectorAll('main .wrap > section.block, main .wrap > figure.shot');
+    var io = new IntersectionObserver(function (es) {
+      es.forEach(function (e) { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } });
+    }, { threshold: 0.08 });
+    blocks.forEach(function (b) { b.classList.add('rv'); io.observe(b); });
+  }
+  if (reduce || !doc.classList.contains('js-arc')) { return; }
+
+  var layer = document.getElementById('falllayer');
+  var cards = Array.prototype.slice.call(layer.children);
+  var wrap = hero.querySelector('.rustywrap2');
+  var shadow = hero.querySelector('.contactshadow');
+  var skipBtn = document.getElementById('skipstorm2');
+  var replayBtn = document.getElementById('replay2');
+  var timers = [], anims = [], running = false;
 
   function later(fn, ms) { timers.push(setTimeout(fn, ms)); }
   function clearAll() {
     timers.forEach(clearTimeout); timers = [];
-    if (spawner) { clearInterval(spawner); spawner = null; }
     anims.forEach(function (a) { try { a.cancel(); } catch (e) {} }); anims = [];
     cards.forEach(function (c) { c.style.visibility = 'hidden'; });
     running = false;
   }
-  function fly(card, dur) {
-    var W = stage.clientWidth, H = stage.clientHeight;
-    var cw = card.offsetWidth || 170;
-    var x0 = Math.random() * Math.max(40, W - cw - 16) + 4;
-    var drift = (Math.random() - 0.5) * W * 0.22;
-    var x1 = Math.min(Math.max(x0 + drift, -cw * 0.3), W - cw * 0.7);
-    var r0 = (Math.random() * 26 - 13).toFixed(1);
-    var r1 = (parseFloat(r0) + (Math.random() * 30 - 15)).toFixed(1);
-    card.style.left = '0px'; card.style.top = '0px'; card.style.visibility = 'visible';
-    var a = card.animate([
-      { transform: 'translate(' + x0 + 'px,' + (-H * 0.22) + 'px) rotate(' + r0 + 'deg) scale(0.55)', opacity: 0 },
-      { transform: 'translate(' + (x0 + drift * 0.3) + 'px,' + (H * 0.08) + 'px) rotate(' + r0 + 'deg) scale(0.78)', opacity: 1, offset: 0.14 },
-      { transform: 'translate(' + (x0 + drift * 0.7) + 'px,' + (H * 0.62) + 'px) rotate(' + r1 + 'deg) scale(1.18)', opacity: 1, offset: 0.78 },
-      { transform: 'translate(' + x1 + 'px,' + (H * 1.12) + 'px) rotate(' + r1 + 'deg) scale(1.55)', opacity: 0 }
-    ], { duration: dur, easing: 'cubic-bezier(.32,.62,.42,1)', fill: 'forwards' });
-    anims.push(a);
-    card._anim = a;
-    a.onfinish = function () { if (card._anim === a) { card.style.visibility = 'hidden'; } };
-    return a;
+  function fall(card, delay, dur, sway) {
+    later(function () {
+      if (!running) return;
+      var W = hero.clientWidth;
+      var cw = card.offsetWidth || 170;
+      var x0 = Math.random() * Math.max(30, W - cw - 24) + 8;
+      card.style.left = '0px'; card.style.top = '0px'; card.style.visibility = 'visible';
+      var a = card.animate([
+        { transform: 'translate(' + x0 + 'px,-34%) rotate(-4deg)', opacity: 0 },
+        { transform: 'translate(' + (x0 + sway * 0.4) + 'px,12%) rotate(2deg)', opacity: 1, offset: 0.18 },
+        { transform: 'translate(' + (x0 + sway) + 'px,58%) rotate(-2deg)', opacity: 1, offset: 0.8 },
+        { transform: 'translate(' + (x0 + sway * 1.2) + 'px,86%) rotate(1deg)', opacity: 0 }
+      ], { duration: dur, easing: 'cubic-bezier(.3,.6,.3,1)', fill: 'forwards' });
+      anims.push(a);
+      a.onfinish = function () { card.style.visibility = 'hidden'; };
+    }, delay);
   }
   function settle() {
-    stage.classList.add('calming');
-    var walk = rustyWrap.animate([
-      { transform: 'translateX(-175%)' }, { transform: 'translateX(0)' }
-    ], { duration: 1500, easing: 'cubic-bezier(.22,.9,.26,1)', fill: 'forwards' });
-    anims.push(walk);
-    var bob = rusty.animate([
-      { transform: 'translateY(0)' }, { transform: 'translateY(-7px)' },
-      { transform: 'translateY(0)' }, { transform: 'translateY(-5px)' },
-      { transform: 'translateY(0)' }
-    ], { duration: 1450, easing: 'ease-in-out', fill: 'forwards' });
-    anims.push(bob);
+    hero.classList.add('settling');
     later(function () {
-      stage.classList.add('calm');
+      hero.classList.add('calm');
       skipBtn.hidden = true;
       later(function () {
-        if (spawner) { clearInterval(spawner); spawner = null; }
-        anims.forEach(function (a) { try { a.cancel(); } catch (e) {} }); anims = [];
-        cards.forEach(function (c) { c.style.visibility = 'hidden'; });
-        stage.classList.remove('live', 'calming', 'calm');
-        running = false;
+        clearAll();
+        hero.classList.remove('live');
         replayBtn.hidden = false;
-      }, 1000);
+      }, 700);
     }, 1250);
   }
   function run() {
     clearAll();
+    hero.classList.remove('calm');
+    hero.classList.remove('settling');
+    hero.classList.add('live');
     replayBtn.hidden = true;
     skipBtn.hidden = false;
-    stage.classList.add('live');
     running = true;
-    var idx = 0, interval = 560, dur = 2400;
-    function spawn() {
-      if (!running) return;
-      var card = cards[idx % cards.length]; idx++;
-      fly(card, dur);
-      interval = Math.max(120, interval * 0.86);
-      dur = Math.max(1050, dur * 0.94);
-      spawner = setTimeout(spawn, interval);
-    }
-    spawn();
-    later(settle, 4600);
+    var plan = [ [0, 1750, 26], [420, 1600, -20], [760, 1850, 16], [1050, 1500, -28], [300, 1900, 12], [880, 1700, -14] ];
+    cards.forEach(function (c, i) { var p = plan[i % plan.length]; fall(c, p[0], p[1], p[2]); });
+    later(settle, 1550);
   }
   skipBtn.addEventListener('click', function () {
     clearAll();
-    stage.classList.remove('live', 'calming', 'calm');
+    hero.classList.remove('live');
+    hero.classList.add('settling');
+    hero.classList.add('calm');
     skipBtn.hidden = true;
     replayBtn.hidden = false;
   });
@@ -513,5 +511,6 @@
   else { window.addEventListener('load', run); }
 })();
 </script>
+
 </body>
 </html>
