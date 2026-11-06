@@ -4,8 +4,9 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Vizsla OS — one system, every shape. Private by design, kind on purpose.</title>
-<meta name="description" content="Vizsla OS is one system in every shape — desktop, tablet, TV, console, phone, dash — built in weeks by one man and the AI he directs. Nothing requires an account.">
+<meta name="description" content="Vizsla OS is one system in every shape — desktop, tablet, TV, console, phone, dash — developed over months by one man and the AI he directs. Nothing requires an account.">
 <link rel="stylesheet" href="style.css">
+<script>if (new URLSearchParams(location.search).get('still') === 'chaos') { document.documentElement.classList.add('stillchaos-doc'); }</script>
 <link rel="icon" href="assets/favicon.ico" sizes="any">
 <link rel="icon" type="image/png" href="assets/favicon.png">
 </head>
@@ -22,6 +23,7 @@
         <li><a href="index.html" aria-current="page">Home</a></li>
         <li><a href="why.html">Why Vizsla?</a></li>
         <li><a href="story.html">The Story</a></li>
+        <li><a href="dogs.html">Meet our dogs</a></li>
         <li><a href="inside.html">What&rsquo;s inside</a></li>
         <li><a href="shelf.html">The Shelf</a></li>
         <li><a href="install.html">Install &amp; Ferry</a></li>
@@ -33,31 +35,123 @@
   </div>
 </header>
 
-<main id="main" class="wrap">
-  <section class="hero">
-    <p class="eyebrow">Vizsla OS</p>
-    <h1>One system, <span class="accent">every shape</span>.<br>Private by design, kind on purpose.</h1>
-    <p class="lede">Vizsla OS was built in a matter of weeks in Leesburg, Florida, by
+<main id="main">
+  <section class="stage" id="stage" aria-label="Vizsla OS — everything flying at you, then calm">
+    <div class="calmglow" aria-hidden="true"></div>
+
+    <div class="chaoslayer" id="chaoslayer" aria-hidden="true">
+      <div class="fcard k-paper" style="--x:5%;--y:8%;--r:-7deg;--s:1"><strong>FORM 27-B</strong><span class="sig">SIGN HERE</span><span class="lines"><i style="width:92%"></i><i style="width:78%"></i><i style="width:85%"></i></span></div>
+      <div class="fcard k-mail" style="--x:29%;--y:4%;--r:5deg;--s:.95"><span class="from">Billing Department</span><span class="subj">Your receipt — and three upsells</span><span class="lines"><i style="width:88%"></i><i style="width:64%"></i></span></div>
+      <div class="fcard k-ad" style="--x:54%;--y:10%;--r:-4deg;--s:1.05"><p class="banner">YOUR TV IS WATCHING YOU BACK!<span class="burst">SHOCKING</span></p><p class="sub">It samples what&rsquo;s on your screen — and reports it.</p></div>
+      <div class="fcard k-text" style="--x:79%;--y:6%;--r:8deg;--s:.9"><p>did you see this??</p><p class="dim">text &middot; just now</p></div>
+      <div class="fcard k-social" style="--x:12%;--y:36%;--r:6deg;--s:1"><p class="who"><span class="dot"></span><strong>Your feed</strong></p><p>You have <strong>47 new notifications</strong></p></div>
+      <div class="fcard k-paper" style="--x:38%;--y:32%;--r:-9deg;--s:.92"><strong>TAX NOTICE</strong><span class="sig">ACTION REQUIRED</span><span class="lines"><i style="width:90%"></i><i style="width:70%"></i><i style="width:82%"></i></span></div>
+      <div class="fcard k-ad" style="--x:64%;--y:34%;--r:3deg;--s:1"><p class="banner">DATA BROKERS SELL YOUR LOCATION<span class="burst">EXPOSED</span></p><p class="sub">Pennies a head. No permission slip.</p></div>
+      <div class="fcard k-mail" style="--x:85%;--y:32%;--r:-6deg;--s:.95"><span class="from">The Thread</span><span class="subj">RE: RE: RE: RE: the thing</span><span class="lines"><i style="width:80%"></i><i style="width:58%"></i></span></div>
+      <div class="fcard k-text" style="--x:22%;--y:60%;--r:-5deg;--s:.9"><p>URGENT — call me back</p><p class="dim">text &middot; 2 min ago</p></div>
+      <div class="fcard k-ad" style="--x:46%;--y:58%;--r:7deg;--s:1.02"><p class="banner">FREE APP HARVESTS YOUR CONTACTS!<span class="burst">TRUE STORY</span></p><p class="sub">Your friends&rsquo; numbers, uploaded.</p></div>
+      <div class="fcard k-paper" style="--x:71%;--y:56%;--r:-8deg;--s:.94"><strong>INSURANCE RENEWAL</strong><span class="sig">14 PAGES ENCLOSED</span><span class="lines"><i style="width:86%"></i><i style="width:74%"></i></span></div>
+      <div class="fcard k-ad" style="--x:8%;--y:76%;--r:4deg;--s:.96"><p class="banner">YOUR CAR REMEMBERS EVERY TRIP<span class="burst">REVEALED</span></p><p class="sub">And it tells. Insurers are listening.</p></div>
+      <div class="fcard k-ad" style="--x:33%;--y:80%;--r:-3deg;--s:1"><p class="banner">BILLIONS OF RECORDS LEAKED — AGAIN<span class="burst">SHOCKING</span></p><p class="sub">Names. Numbers. Addresses. Yours?</p></div>
+      <div class="fcard k-social" style="--x:58%;--y:78%;--r:6deg;--s:.92"><p class="who"><span class="dot"></span><strong>Somewhere social</strong></p><p>Someone mentioned you in a thread</p></div>
+      <div class="fcard k-ad" style="--x:82%;--y:74%;--r:-5deg;--s:.98"><p class="banner">WHILE YOU SLEEP, YOUR APPS PHONE HOME<span class="burst">CAUGHT</span></p><p class="sub">Dozens of trackers. Every night.</p></div>
+      <div class="fcard k-mail" style="--x:44%;--y:6%;--r:9deg;--s:.9"><span class="from">The Clinic</span><span class="subj">Appointment reminder — tomorrow, 9:00</span><span class="lines"><i style="width:84%"></i><i style="width:60%"></i></span></div>
+    </div>
+
+    <div class="stagefloor">
+      <div class="rustywrap"><img class="rusty" src="assets/rusty-hero.png" width="720" height="570" alt="Rusty, the russet vizsla of Vizsla OS, walking in"></div>
+      <div class="restpile" aria-hidden="true">
+        <div class="fcard k-paper rest r1"><span class="lines"><i style="width:88%"></i><i style="width:72%"></i></span></div>
+        <div class="fcard k-paper rest r2"><span class="lines"><i style="width:80%"></i><i style="width:66%"></i></span></div>
+        <div class="fcard k-paper rest r3"><strong>Arrival</strong><span class="sig">TODAY, IN ORDER</span></div>
+      </div>
+    </div>
+
+    <div class="calmcopy">
+      <p class="eyebrow light">Vizsla OS</p>
+      <h1>One system, <span class="accent">every shape</span>.<br>Private by design, kind on purpose.</h1>
+      <p class="promise">Papers, mail, messages, and ads, all flying at you at once — Vizsla brings them to one calm place. That&rsquo;s the whole idea.</p>
+      <p class="statusline onstage"><strong>The honest status:</strong> Vizsla OS is in active
+      development, being built in the open at home. There is no download yet &mdash;
+      when there is, it will be right here. <a href="story.html">Read how it&rsquo;s being made</a>.</p>
+      <p class="doors"><a class="btn" href="inside.html">See what&rsquo;s inside</a> <a class="btn ghost" href="story.html">Read the story</a></p>
+    </div>
+
+    <div class="stagecontrols">
+      <button type="button" class="textbtn" id="skipstorm" hidden>Skip the storm</button>
+      <button type="button" class="textbtn" id="replay" hidden>Watch it again</button>
+    </div>
+  </section>
+
+  <div class="wrap">
+  <section class="block firstblock">
+    <p class="lede">Vizsla OS has been developed over months in Leesburg, Florida, by
     Richard Garrison &mdash; an HR and healthcare-operations man with a degree in English
     and Anthropology, a head full of whole worlds, and no intention of waiting a
     decade &mdash; working with an AI he directs in plain language, often sixteen hours
-    a day. The build took weeks; the ideas were already years old &mdash; listed, wished
+    a day. The building took months; the ideas were already years old &mdash; listed, wished
     for, and blueprinted on paper since at least 2019, with the full
     plan for that system written in the summer of 2026. Nothing requires an account. It is deliberately different in all the ways
     that matter &mdash; not just privacy, but kindness &mdash; and it is a labor of love
     that is still listening.</p>
-    <p class="statusline"><strong>The honest status:</strong> Vizsla OS is in active
-    development, being built in the open at home. There is no download yet &mdash;
-    when there is, it will be right here. <a href="story.html">Read how it&rsquo;s being made</a>.</p>
     <p><strong>Open, too:</strong> Vizsla OS runs on the Linux kernel, and the
     whole project is free and open-source software &mdash; yours to modify and
     redistribute. <a href="kindness.html#open-source">The open-source statement</a>.</p>
   </section>
 
-  <figure class="shot">
-    <img src="assets/help-bondi.jpg" alt="Vizsla Help open on a wide screen, in the dark Bondi theme" width="1440" height="607">
-    <figcaption>A real screenshot: Vizsla Help, the system&rsquo;s own manual, running on the machine it was written for. No mockups anywhere on this site &mdash; the screenshots are captures of the real thing, and the vizsla pictures below are the system&rsquo;s own artwork.</figcaption>
-  </figure>
+  <section class="block" id="whats-new">
+    <h2>What&rsquo;s new</h2>
+    <p>New in November 2026 &mdash; shipped, in the house, and in daily use. Vizsla
+    itself is still not released; this is the work arriving, piece by piece.</p>
+    <div class="cards">
+      <div class="card">
+        <p class="newsdate">Sniff Search</p>
+        <h3>It forgives typos now</h3>
+        <p>Type &ldquo;pohtos&rdquo; and Sniff finds your photos &mdash; and shows its
+        guess out loud, with one tap to search exactly what you typed. No silent
+        corrections, no dead ends.</p>
+      </div>
+      <div class="card">
+        <p class="newsdate">Vizsla Arcade</p>
+        <h3>Shark Supper, repainted</h3>
+        <p>The shark game surfaced with a whole new painted cast &mdash; the vizsla
+        in scuba gear included &mdash; and passed its owner&rsquo;s own playtest.
+        Word Wheel&rsquo;s board finally fits its stage, too.</p>
+      </div>
+      <div class="card">
+        <p class="newsdate">AudioWaves</p>
+        <h3>The MIDI shelf is open</h3>
+        <p>The family&rsquo;s MIDI soundtracks &mdash; the Arcade songbook and the
+        theme tunes &mdash; now sit in the music library next to everything else,
+        playable like any record in the house.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="block" id="sneak-peek">
+    <h2>A sneak peek</h2>
+    <p>Cool features are better shown than described &mdash; so here are four of the
+    house&rsquo;s apps as they actually look this November. No mockups anywhere on
+    this site: these are real captures of the real software.</p>
+    <div class="peekgrid">
+      <figure>
+        <img src="assets/peek-sniff.jpg" alt="Sniff Search answering a question on the machine itself, with a dictionary answer card that names its source" width="691" height="635" loading="lazy">
+        <figcaption><strong>Sniff Search</strong> &mdash; ask in plain words. It answers from your own machine and names its sources &mdash; nothing left this machine for this answer.</figcaption>
+      </figure>
+      <figure>
+        <img src="assets/peek-waves.jpg" alt="AudioWaves with the MIDI room open and a soundtrack playing" width="1100" height="751" loading="lazy">
+        <figcaption><strong>AudioWaves</strong> &mdash; your music library, with the new MIDI shelf open: the Arcade&rsquo;s own songs, playable like any album.</figcaption>
+      </figure>
+      <figure>
+        <img src="assets/peek-shark.jpg" alt="Shark Supper in play: a painted underwater scene, the vizsla in scuba gear among the sharks" width="1100" height="642" loading="lazy">
+        <figcaption><strong>Vizsla Arcade</strong> &mdash; Shark Supper, one of the games built into the house, wearing its new painted cast.</figcaption>
+      </figure>
+      <figure>
+        <img src="assets/peek-rabbit.jpg" alt="Rabbit Ears showing the live TV guide in the calm Paper theme" width="1100" height="577" loading="lazy">
+        <figcaption><strong>Rabbit Ears</strong> &mdash; live TV in one calm guide: 302 channels of it, laid out the way the cable grid should have been.</figcaption>
+      </figure>
+    </div>
+  </section>
 
   <section class="block">
     <h2>Calm by default &mdash; ready when you are</h2>
@@ -158,34 +252,31 @@
   <section class="block">
     <h2>Meet the Vizsla</h2>
     <p>Every operating system has a face. This one has a dog. The vizsla is all over
-    Vizsla OS &mdash; in the wallpapers your day opens on, in the screen saver that
-    covers an idle machine, in the portraits and the search hound. These pictures are
-    the system&rsquo;s own artwork, the very images that ship in it &mdash; no stock
-    photos, and no photographs at all: the Vizsla of Vizsla is drawn, not photographed.</p>
+    Vizsla OS &mdash; in the wallpapers your day opens on, in the portraits and the
+    search hound. These pictures are the system&rsquo;s own artwork, the very images
+    that ship in it &mdash; no stock photos, and no photographs at all: the Vizsla of
+    Vizsla is drawn, not photographed. The wallpaper shelf is kept short on purpose:
+    five, each one earning its place.</p>
     <div class="gallery">
       <figure>
-        <img src="assets/vizsla-wallpaper-golden-field.jpg" alt="A faceted russet vizsla standing in a golden wheat field" width="1600" height="686" loading="lazy">
-        <figcaption><strong>Golden Field</strong> &mdash; the recommended default from the Arrival wallpaper collection that ships in the OS.</figcaption>
-      </figure>
-      <figure>
-        <img src="assets/vizsla-wallpaper-marsh-point.jpg" alt="A vizsla on point in a misty marsh at dawn, a bird overhead" width="1600" height="686" loading="lazy">
-        <figcaption><strong>Marsh Point</strong> &mdash; the same collection: the dog on point at dawn.</figcaption>
+        <img src="assets/vizsla-wallpaper-fireside.jpg" alt="A vizsla lying on a rug before a lit stone fireplace" width="2384" height="1008" loading="lazy">
+        <figcaption><strong>Fireside</strong> &mdash; the calm default, in picture form.</figcaption>
       </figure>
       <figure>
         <img src="assets/vizsla-wallpaper-bubble-bath.jpg" alt="A vizsla in a clawfoot bathtub with a beard of bubbles and a rubber duck" width="1600" height="686" loading="lazy">
         <figcaption><strong>Bubble Bath</strong> &mdash; also in the collection. The system has a sense of humor; it comes from the owner.</figcaption>
       </figure>
       <figure>
-        <img src="assets/vizsla-wallpaper-fireside.jpg" alt="A vizsla lying on a rug before a lit stone fireplace" width="1600" height="686" loading="lazy">
-        <figcaption><strong>Fireside</strong> &mdash; the calm default, in picture form.</figcaption>
+        <img src="assets/vizsla-wallpaper-ames.jpg" alt="A vizsla sitting on watch in a faceted small-town scene" width="2448" height="1024" loading="lazy">
+        <figcaption><strong>Ames</strong> &mdash; the Arrival wallpaper collection: the dog on watch, sitting for the town.</figcaption>
       </figure>
       <figure>
-        <img src="assets/vizsla-saver-the-point.jpg" alt="The screen saver&rsquo;s vizsla puppet standing on point in a meadow" width="1400" height="784" loading="lazy">
-        <figcaption><strong>The Point</strong> &mdash; the Screen Saver&rsquo;s vizsla, a puppet drawn and animated in code. This is the dog that covers your screen when the machine naps.</figcaption>
+        <img src="assets/vizsla-wallpaper-tokyo.jpg" alt="A vizsla lying beneath cherry blossoms in a faceted Tokyo scene" width="2448" height="1024" loading="lazy">
+        <figcaption><strong>Tokyo</strong> &mdash; the same collection: at rest under the blossoms.</figcaption>
       </figure>
       <figure>
-        <img src="assets/vizsla-saver-deep-nap.jpg" alt="Rusty, the painted vizsla of the screen saver, asleep on a rug" width="1400" height="784" loading="lazy">
-        <figcaption><strong>Deep Nap</strong> &mdash; Rusty, the saver&rsquo;s painted cast member, asleep on the rug.</figcaption>
+        <img src="assets/vizsla-wallpaper-orlando.jpg" alt="A vizsla standing in a faceted Orlando scene" width="2448" height="1024" loading="lazy">
+        <figcaption><strong>Orlando</strong> &mdash; the same collection: standing tall.</figcaption>
       </figure>
       <figure>
         <img src="assets/vizsla-portrait-classic.jpg" alt="The Classic — a portrait of the vizsla from the system&rsquo;s portrait pack" width="1600" height="1600" loading="lazy">
@@ -284,6 +375,7 @@
     years. Nobody competed on being kind to the person at the keyboard.
     <a href="kindness.html">More on kindness &amp; privacy</a>.</p>
   </section>
+  </div>
 </main>
 
 <footer class="site">
@@ -301,6 +393,7 @@
       <div>
         <a href="why.html">Why Vizsla?</a><br>
         <a href="story.html">The Story</a><br>
+        <a href="dogs.html">Meet our dogs</a><br>
         <a href="inside.html">What&rsquo;s inside</a><br>
         <a href="shelf.html">The Shelf</a><br>
         <a href="install.html">Install &amp; Ferry</a><br>
@@ -320,5 +413,105 @@
     vizsla pictures are the system&rsquo;s own artwork, the images that ship in it.</p>
   </div>
 </footer>
+
+<script>
+(function () {
+  var stage = document.getElementById('stage');
+  if (!stage) return;
+  var layer = document.getElementById('chaoslayer');
+  var cards = Array.prototype.slice.call(layer.children);
+  var rustyWrap = stage.querySelector('.rustywrap');
+  var rusty = stage.querySelector('.rusty');
+  var skipBtn = document.getElementById('skipstorm');
+  var replayBtn = document.getElementById('replay');
+  var still = new URLSearchParams(location.search).get('still');
+  if (still === 'chaos') { stage.classList.add('stillchaos'); return; }
+  if (still === 'calm') { return; }
+  if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) { return; }
+
+  var timers = [], anims = [], spawner = null, running = false;
+
+  function later(fn, ms) { timers.push(setTimeout(fn, ms)); }
+  function clearAll() {
+    timers.forEach(clearTimeout); timers = [];
+    if (spawner) { clearInterval(spawner); spawner = null; }
+    anims.forEach(function (a) { try { a.cancel(); } catch (e) {} }); anims = [];
+    cards.forEach(function (c) { c.style.visibility = 'hidden'; });
+    running = false;
+  }
+  function fly(card, dur) {
+    var W = stage.clientWidth, H = stage.clientHeight;
+    var cw = card.offsetWidth || 170;
+    var x0 = Math.random() * Math.max(40, W - cw - 16) + 4;
+    var drift = (Math.random() - 0.5) * W * 0.22;
+    var x1 = Math.min(Math.max(x0 + drift, -cw * 0.3), W - cw * 0.7);
+    var r0 = (Math.random() * 26 - 13).toFixed(1);
+    var r1 = (parseFloat(r0) + (Math.random() * 30 - 15)).toFixed(1);
+    card.style.left = '0px'; card.style.top = '0px'; card.style.visibility = 'visible';
+    var a = card.animate([
+      { transform: 'translate(' + x0 + 'px,' + (-H * 0.22) + 'px) rotate(' + r0 + 'deg) scale(0.55)', opacity: 0 },
+      { transform: 'translate(' + (x0 + drift * 0.3) + 'px,' + (H * 0.08) + 'px) rotate(' + r0 + 'deg) scale(0.78)', opacity: 1, offset: 0.14 },
+      { transform: 'translate(' + (x0 + drift * 0.7) + 'px,' + (H * 0.62) + 'px) rotate(' + r1 + 'deg) scale(1.18)', opacity: 1, offset: 0.78 },
+      { transform: 'translate(' + x1 + 'px,' + (H * 1.12) + 'px) rotate(' + r1 + 'deg) scale(1.55)', opacity: 0 }
+    ], { duration: dur, easing: 'cubic-bezier(.32,.62,.42,1)', fill: 'forwards' });
+    anims.push(a);
+    card._anim = a;
+    a.onfinish = function () { if (card._anim === a) { card.style.visibility = 'hidden'; } };
+    return a;
+  }
+  function settle() {
+    stage.classList.add('calming');
+    var walk = rustyWrap.animate([
+      { transform: 'translateX(-175%)' }, { transform: 'translateX(0)' }
+    ], { duration: 1500, easing: 'cubic-bezier(.22,.9,.26,1)', fill: 'forwards' });
+    anims.push(walk);
+    var bob = rusty.animate([
+      { transform: 'translateY(0)' }, { transform: 'translateY(-7px)' },
+      { transform: 'translateY(0)' }, { transform: 'translateY(-5px)' },
+      { transform: 'translateY(0)' }
+    ], { duration: 1450, easing: 'ease-in-out', fill: 'forwards' });
+    anims.push(bob);
+    later(function () {
+      stage.classList.add('calm');
+      skipBtn.hidden = true;
+      later(function () {
+        if (spawner) { clearInterval(spawner); spawner = null; }
+        anims.forEach(function (a) { try { a.cancel(); } catch (e) {} }); anims = [];
+        cards.forEach(function (c) { c.style.visibility = 'hidden'; });
+        stage.classList.remove('live', 'calming', 'calm');
+        running = false;
+        replayBtn.hidden = false;
+      }, 1000);
+    }, 1250);
+  }
+  function run() {
+    clearAll();
+    replayBtn.hidden = true;
+    skipBtn.hidden = false;
+    stage.classList.add('live');
+    running = true;
+    var idx = 0, interval = 560, dur = 2400;
+    function spawn() {
+      if (!running) return;
+      var card = cards[idx % cards.length]; idx++;
+      fly(card, dur);
+      interval = Math.max(120, interval * 0.86);
+      dur = Math.max(1050, dur * 0.94);
+      spawner = setTimeout(spawn, interval);
+    }
+    spawn();
+    later(settle, 4600);
+  }
+  skipBtn.addEventListener('click', function () {
+    clearAll();
+    stage.classList.remove('live', 'calming', 'calm');
+    skipBtn.hidden = true;
+    replayBtn.hidden = false;
+  });
+  replayBtn.addEventListener('click', run);
+  if (document.readyState === 'complete') { run(); }
+  else { window.addEventListener('load', run); }
+})();
+</script>
 </body>
 </html>
