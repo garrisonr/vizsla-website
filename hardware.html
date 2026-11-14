@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Tested hardware — Vizsla OS</title>
+<meta name="description" content="The exact hardware Vizsla OS is built and tested on: the three test machines, the GPS receivers, webcam, TV remote and fingerprint reader the house actually uses — and what a machine needs to run it.">
+<link rel="stylesheet" href="style.css">
+<link rel="icon" href="assets/favicon.ico" sizes="any">
+<link rel="icon" type="image/png" href="assets/favicon.png">
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="site">
+  <div class="wrap">
+    <a class="brand" href="index.html" aria-label="Vizsla OS — home">
+      <img src="assets/vizsla-mark.jpg" width="38" height="38" alt="">
+      <span class="wordmark">VIZSLA</span>
+    </a>
+    <nav class="main" aria-label="Main">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="why.html">Why Vizsla?</a></li>
+        <li><a href="story.html">The Story</a></li>
+        <li><a href="dogs.html">Meet our dogs</a></li>
+        <li><a href="inside.html">What&rsquo;s inside</a></li>
+        <li><a href="phone-and-texting.html">Phone &amp; texting</a></li>
+        <li><a href="tv.html">TV Launcher</a></li>
+        <li><a href="arcade.html">Vizsla Arcade</a></li>
+        <li><a href="future.html">Future developments</a></li>
+        <li><a href="furniture.html">Furniture &amp; appearance</a></li>
+        <li><a href="shelf.html">The Shelf</a></li>
+        <li><a href="install.html">Install &amp; Ferry</a></li>
+        <li><a href="savings.html">Savings</a></li>
+        <li><a href="kindness.html">Kindness &amp; privacy</a></li>
+        <li><a href="feedback.html">Get involved</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+<main id="main" class="wrap">
+  <div class="pagehead">
+    <p class="eyebrow">Tested hardware</p>
+    <h1>The machines and gear Vizsla is tested on</h1>
+    <p class="lede">No lab, no review units &mdash; these are the computers on the
+    desks where Vizsla is built, and the exact peripherals plugged into them,
+    read off the machines themselves on 13 November 2026. If a thing isn&rsquo;t
+    listed here, we haven&rsquo;t lived with it, and we&rsquo;d rather leave the
+    space blank than guess.</p>
+  </div>
+
+  <section class="block">
+    <h2>The test units</h2>
+    <p>Three machines carry the whole fleet&rsquo;s testing. They are named here
+    by shape, not by brand &mdash; what matters is the machinery inside.</p>
+    <table class="savings">
+      <thead>
+        <tr><th></th><th>Test Unit 1 &mdash; the tower</th><th>Test Unit 2 &mdash; the mini</th><th>Test Unit 3 &mdash; the small desktop</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>Processor</td><td>8-core / 16-thread desktop processor, current generation (Zen&nbsp;5), boosting to 5.58&nbsp;GHz</td><td>4-core low-power mobile-class processor (N-series), up to 3.6&nbsp;GHz</td><td>14-core / 28-thread workstation processor (v4 generation), 2.4&nbsp;GHz base, 3.3&nbsp;GHz boost</td></tr>
+        <tr><td>Memory</td><td>32&nbsp;GB DDR5, running at 5200&nbsp;MT/s</td><td>12&nbsp;GB LPDDR5, soldered, running at 4800&nbsp;MT/s</td><td>32&nbsp;GB DDR4 ECC, 2400&nbsp;MT/s</td></tr>
+        <tr><td>Storage inside</td><td>One &asymp;1&nbsp;TB NVMe SSD, holding the system</td><td>Two &asymp;2&nbsp;TB NVMe SSDs (the system on one), plus &asymp;64&nbsp;GB eMMC</td><td>One &asymp;2&nbsp;TB NVMe SSD holding the system, plus one &asymp;960&nbsp;GB SATA SSD</td></tr>
+      </tbody>
+    </table>
+    <p>The mini is the honest floor of the fleet: if Vizsla runs well there
+    &mdash; twelve gigabytes of memory and a low-power processor &mdash; it runs
+    well anywhere it belongs.</p>
+  </section>
+
+  <section class="block">
+    <h2>What a machine needs</h2>
+    <p>The installer&rsquo;s targets, plainly:</p>
+    <ul>
+      <li><strong>Installer media:</strong> a USB stick of at least
+      <strong>128&nbsp;GB</strong>.</li>
+      <li><strong>The install drive:</strong> an SSD or NVMe drive of at least
+      <strong>256&nbsp;GB</strong> &mdash; and <strong>1&nbsp;TB is the minimum
+      we recommend</strong> for comfortable, optimal use.</li>
+      <li><strong>Memory:</strong> at least <strong>12&nbsp;GB</strong> of RAM
+      &mdash; the smallest test unit above runs on exactly that.</li>
+      <li><strong>Hard drives:</strong> SATA hard drives and external hard
+      drives are recommended for <strong>media storage and backup only</strong>
+      &mdash; never as the drive Vizsla itself is installed on. Spinning disks
+      are where the films and the backups live; the system lives on flash.</li>
+    </ul>
+  </section>
+
+  <section class="block">
+    <h2>GPS receivers</h2>
+    <p>Vizsla&rsquo;s maps and dash faces take their position from USB GPS
+    receivers, read through gpsd &mdash; the system never phones a location
+    home. Two receivers are in daily testing, one per chipset family, on
+    purpose:</p>
+    <ul>
+      <li><strong>GlobalSat BU-353N</strong> &mdash; a multi-GNSS puck
+      (GPS, GLONASS, Galileo, BeiDou) on the mini. About $50 when bought in
+      October 2026. A small honesty: its USB name tag only admits to being a
+      serial bridge &mdash; the model is named by the purchase record and the
+      fleet&rsquo;s own configuration, and its live fix is verified nightly.</li>
+      <li><strong>VK-162 G-Mouse</strong> &mdash; a u-blox 7 receiver on the
+      tower, on a cable long enough that the puck can sit in a window for a
+      clear sky while the computer stays at the desk. About $17 when bought in
+      November 2026.</li>
+    </ul>
+  </section>
+
+  <section class="block">
+    <h2>Webcam</h2>
+    <ul>
+      <li><strong>Logitech Brio 100</strong> &mdash; the tower&rsquo;s camera:
+      a 1080p-class USB webcam that speaks the standard UVC language, so it
+      works with no drivers and no account.</li>
+    </ul>
+  </section>
+
+  <section class="block">
+    <h2>The TV remote</h2>
+    <ul>
+      <li><strong>G10S Pro BT</strong> &mdash; an air-mouse remote with a
+      microphone, about $22 when bought in November 2026. In this house it is
+      tested through its 2.4&nbsp;GHz USB dongle: the keys, the air mouse, and
+      the microphone all arrive as ordinary USB devices, and its voice button
+      has been capture-verified through that microphone. Honestly stated: it
+      has never been run here over Bluetooth &mdash; on these machines it is a
+      dongle remote, and that is the setup we can vouch for.</li>
+    </ul>
+  </section>
+
+  <section class="block">
+    <h2>Fingerprint reader</h2>
+    <ul>
+      <li><strong>DigitalPersona U.are.U 4500</strong> &mdash; the reader
+      chosen for Secrets&rsquo; fingerprint unlock, from the fingerprint
+      library&rsquo;s own supported list. It arrives Sunday 15 November 2026;
+      its listing here is ahead of its first test, and we say so &mdash; the
+      enrollment session is the test, and this line gets its verdict after
+      it.</li>
+    </ul>
+  </section>
+
+  <section class="block">
+    <h2>Game controller</h2>
+    <p>A controller belongs on this list &mdash; the Arcade is in the box, and
+    the dash wants one too. The space is deliberately blank for now: a few
+    candidates are named in our notes, none has been bought and lived with
+    yet, and this page only names what we have tested. When one earns the
+    spot, it will appear here with the same plain treatment as everything
+    above.</p>
+  </section>
+</main>
+
+<footer class="site">
+  <div class="wrap">
+    <div class="cols">
+      <div>
+        <strong>Vizsla OS</strong><br>
+        Built in Leesburg, Florida, by Richard Garrison<br>
+        and the AI he directs.
+        <p class="contactline">Contact: <a href="mailto:garrison.richard@proton.me">garrison.richard@proton.me</a><br>
+        <a href="https://instagram.com/richardgarrisonia">Instagram</a> &middot;
+        <a href="https://facebook.com/richard.garrison.731917">Facebook</a> &middot;
+        <a href="https://www.linkedin.com/in/garrisonrichard">LinkedIn</a></p>
+      </div>
+      <div>
+        <a href="why.html">Why Vizsla?</a><br>
+        <a href="story.html">The Story</a><br>
+        <a href="dogs.html">Meet our dogs</a><br>
+        <a href="inside.html">What&rsquo;s inside</a><br>
+        <a href="phone-and-texting.html">Phone &amp; texting</a><br>
+        <a href="tv.html">TV Launcher</a><br>
+        <a href="arcade.html">Vizsla Arcade</a><br>
+        <a href="future.html">Future developments</a><br>
+        <a href="furniture.html">Furniture &amp; appearance</a><br>
+        <a href="hardware.html">Tested hardware</a><br>
+        <a href="shelf.html">The Shelf</a><br>
+        <a href="install.html">Install &amp; Ferry</a><br>
+        <a href="savings.html">What you stop paying for</a><br>
+        <a href="kindness.html">Kindness &amp; privacy</a><br>
+        <a href="feedback.html">Get involved</a>
+      </div>
+      <div>
+        In active development.<br>
+        No download yet &mdash; honestly.<br>
+        <a href="inside.html#try-profiler">Except System Profiler &mdash; try it today</a>
+      </div>
+    </div>
+    <p class="fineprint">Hardware read live from the test machines on 13 November 2026. This site sets
+    no cookies and runs no trackers.</p>
+  </div>
+</footer>
+</body>
+</html>
