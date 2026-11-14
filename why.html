@@ -710,14 +710,40 @@
         <p class="beats"><strong>Why it beats the usual way:</strong> the usual way is a streaming app&rsquo;s borrowed library with your own files shoved in a side tab, grey and unlabelled. Here your files are the main collection &mdash; the shelf everything else is shelved around.</p>
       </div>
       <div class="card">
+        <h3>He Said/She Said &mdash; search what was said</h3>
+        <p class="does">Every podcast episode AudioWaves transcribes &mdash; on your own machine, with a local speech model, nothing sent anywhere &mdash; becomes searchable text, and this room searches it. Type a name, a word, or a quoted phrase and the exact passages come back: verbatim quotes, each pinned to its show, its episode, and its second &mdash; the moment, found, with its address on it, so you can go and hear it in the voice that said it. The room keeps its own count in the open &mdash; how many episodes are transcribed, how many passages are searchable &mdash; and it only ever searches what has really been transcribed.</p>
+        <p class="beats"><strong>Why it beats the usual way:</strong> the usual way is scrubbing a progress bar through a two-hour episode, hunting the sentence you half-remember. Here the sentence finds you &mdash; the argument in the true-crime show, the claim in the interview, the joke in the panel show &mdash; quoted word for word, with the exact second it was said at. One honesty the app prints on its own face: there are no speaker labels yet, so a name search finds where the name was <em>said</em>, not everything that person said. The distinction is stated, not hidden.</p>
+      </div>
+      <div class="card">
+        <h3>Podcasts, all the way down</h3>
+        <p class="does">Two shelves of them. The Podcast Directory is a curated shelf of shows &mdash; twenty lanes of them, from food to true crime, each one verified &mdash; that you browse before you subscribe. Your Shows is your own shelf, refreshed on your word, every episode carrying its show notes in full: the notes the makers wrote, not a teaser line. Downloads land on your disk and stay there, and any downloaded episode can be transcribed on the spot &mdash; which is what feeds the room above.</p>
+        <p class="beats"><strong>Why it beats the usual way:</strong> the usual podcatcher is a store wearing a library as a hat, your feeds buried under whatever is being promoted this week. This is a directory you browse like a shelf, and a library that keeps what you chose &mdash; notes and all, offline once downloaded, with an honest note when a feed goes quiet instead of a row of blanks.</p>
+      </div>
+      <div class="card">
+        <h3>Played exactly as recorded</h3>
+        <p class="does">FLAC plays losslessly, 24-bit and high-sample-rate included, and the line under the track names what is actually playing &mdash; &ldquo;FLAC 24/96&rdquo; &mdash; read from the file itself, not from its name. DSD files play through AudioWaves&rsquo; own reader and ride to a DAC that accepts them as DoP, untouched by volume, effects, or resampling. Bit-perfect mode stands the extras down &mdash; no equalizer, no ReplayGain, no resampling &mdash; and the words &ldquo;bit-perfect&rdquo; are only printed while the path really is unchanged.</p>
+        <p class="beats"><strong>Why it beats the usual way:</strong> most players resample everything to one system rate and let you believe otherwise. Here every playing track carries its Signal Path &mdash; the source, each step the sound takes, the device at the end &mdash; proven by reading the device back, and labeled unverified when a read-back can&rsquo;t be had. If a device tops out below a track&rsquo;s rate, the track is resampled to the best that device has, and the line names the change instead of hiding it.</p>
+      </div>
+      <div class="card">
+        <h3>Your DAC, your rooms</h3>
+        <p class="does">The output picker in Settings lists the devices your machine can actually play through &mdash; a USB DAC among them &mdash; with the rates each one owns. Two ways to play: <em>Follow the music</em>, which runs the device at each song&rsquo;s own rate, or <em>DAC Direct</em>, which gives the device to AudioWaves alone and applies no digital volume at all. And when one room isn&rsquo;t enough, the Rooms room plays the house together &mdash; send what you are playing to other rooms, or join another source as a room yourself, in sync, with the timing measured and stated. It speaks Sendspin, an open whole-home protocol, so the other rooms don&rsquo;t have to be AudioWaves to join.</p>
+        <p class="beats"><strong>Why it beats the usual way:</strong> the usual way is a proprietary speaker ecosystem and a prayer. This is your DAC, picked by name and measured, and whole-home groups a box joins only when someone at that box says yes.</p>
+      </div>
+      <!-- CASTING PASSAGE — RECONCILED 2026-11-14: the six claims below are lifted verbatim from the CASTING CLAIMS block of the casting completion crew's receipt, ~/workspace/audiowaves-casting-complete/RECEIPT.md (AudioWaves 1.54.21, published). Do not strengthen. -->
+      <div class="card">
+        <h3>Casting &mdash; put it on the big speakers</h3>
+        <p class="does"><strong>Chromecast:</strong> Casting to Chromecast is built in and proven on real hardware — AudioWaves cast a file to the owner's own TV, the receiver reported it playing with its position advancing, and stop handed control back cleanly.</p>
+        <p class="does"><strong>LG webOS TVs:</strong> The LG webOS TV in the house connects too, ancient certificate and all — the Cast library carries a scoped fix for TVs whose certificates modern TLS stacks refuse.</p>
+        <p class="does"><strong>Sonos:</strong> Sonos support is built in natively, with no Python bridge — whole zone groups appear as one speaker target. It is proven against a simulated Sonos renderer; there is no Sonos hardware in the house yet, so the first real-world Sonos proof is still to come, and we say so.</p>
+        <p class="does"><strong>DLNA:</strong> DLNA/UPnP speakers and renderers are supported natively and proven against a simulated renderer; none was awake on the home network at proof time.</p>
+        <p class="does"><strong>AirPlay:</strong> AirPlay TVs are discovered by name and the helper installs from inside the app. Every AirPlay TV in the house demands a one-time pairing at the TV itself before it will accept a first cast — until that is done, AirPlay waits, honestly.</p>
+        <p class="does"><strong>Spotify Connect:</strong> Spotify Connect is deliberately not included: Connect speakers can only play Spotify's own catalog, never your library.</p>
+        <p class="beats"><strong>Why it beats the usual way:</strong> the usual way is a music service renting you access to your own speakers. This is your files, your network, your speakers &mdash; no account in the middle.</p>
+      </div>
+      <div class="card">
         <h3>Playlists, built in</h3>
         <p class="does">Playlists are a room of their own: make one in a breath, add any track with one tap, or import the playlist files you already have &mdash; they land as first-class lists, not attachments.</p>
         <p class="beats"><strong>Why it beats the usual way:</strong> your playlists are the one thing streaming services hold hostage &mdash; leave, and the lists stay behind. These are data in your library, in the open, on your machine.</p>
-      </div>
-      <div class="card">
-        <h3>Podcasts that wear their names</h3>
-        <p class="does">Podcasts ride in the same library &mdash; shows and episodes listed by their real titles, refreshed on your word, with an honest note when a feed goes quiet instead of a row of blanks.</p>
-        <p class="beats"><strong>Why it beats the usual way:</strong> the usual podcatcher buries the feeds you chose inside a store that&rsquo;s always selling you a different one. This is a shelf for your feeds, named the way their makers named them.</p>
       </div>
       <div class="card">
         <h3>Songdog &mdash; the MIDI desk</h3>
@@ -739,8 +765,13 @@
     <div class="cards">
       <div class="card">
         <h3>Film Ferret &mdash; the catalog, with playlists built in</h3>
-        <p class="does">Every film you own, catalogued properly &mdash; and playlists are built in, not bolted on: build a list for a director, a decade, a mood, and it&rsquo;s a shelf of its own, kept in the catalog with the films.</p>
+        <p class="does">Every film you own, catalogued properly &mdash; titles, posters, years, and facts &mdash; while the films themselves stay exactly where they already live: on your own drives, in the collection you built. That deserves saying plainly, because it is the whole design: <strong>no torrents and no copyrighted media are included</strong> &mdash; not in Film Ferret, and not in Vizsla OS. The catalog holds filenames and metadata, and a filename is enough: enough to shelve a film, search for it, and draw a century of cinema up by decade. Playlists are built in, not bolted on: build a list for a director, a decade, a mood, and it&rsquo;s a shelf of its own &mdash; and a playlist can be shared with other Vizsla OS users, as what it is: the titles and metadata, matched against their own collection on their own machine. It tracks the unobtainium collection too &mdash; films that are no longer available in the USA &mdash; so the ones that got away stay on the record.</p>
         <p class="beats"><strong>Why it beats the usual way:</strong> the usual way is a streaming home screen that shows you what&rsquo;s being sold this month and calls it your library. The Ferret&rsquo;s catalog is your collection and nothing else &mdash; no row is an advertisement, and nothing &ldquo;leaves soon.&rdquo;</p>
+      </div>
+      <div class="card">
+        <h3>Trailers, right in the catalog</h3>
+        <p class="does">Deciding what to watch tonight is a catalog job, so the trailer lives in the catalog. A film&rsquo;s page carries its trailer &mdash; the real one, on YouTube &mdash; and it plays right there in the Ferret, in a lightbox over the shelf you were just browsing. Browse, watch the trailer, commit to the film: no leaving the catalog, no hunting a video site, no wondering whether that was even the right trailer. The catalog itself stays names and facts; the trailer is the one piece of a film it will fetch for you &mdash; streamed for the moment, never stored.</p>
+        <p class="beats"><strong>Why it beats the usual way:</strong> the usual way is pausing the evening to go find a trailer somewhere else, on a page built to sell you the next video instead. Here the trailer is a feature of the shelf &mdash; two minutes of the film, exactly where the decision is.</p>
       </div>
       <div class="card">
         <h3>Poster Player &mdash; the wall</h3>
@@ -758,6 +789,12 @@
         <p class="beats"><strong>Why it beats the usual way:</strong> not a second device with a second library to re-buy and re-organize. The theater and the desk are one box wearing two shapes.</p>
       </div>
     </div>
+    <figure class="shot">
+      <img src="assets/film-ferret-trailer.jpg" alt="Psycho&rsquo;s trailer playing inside Film Ferret: the trailer lightbox mid-scene, opened from the film&rsquo;s catalog entry" width="1200" height="730">
+      <figcaption>The trailer, playing where the catalog lives &mdash; opened
+      from Psycho&rsquo;s own catalog page, and closing it puts you back on
+      the shelf you were browsing. A real capture of the shipped app.</figcaption>
+    </figure>
     <p class="diff">You bring your own media &mdash; stated proudly, again.
     Vizsla ships the players, the shelves, the posters, and the playlists;
     the films are the owner&rsquo;s own collection, on the owner&rsquo;s own
