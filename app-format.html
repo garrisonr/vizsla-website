@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>How Vizsla apps ship &mdash; the AppImage choice — Vizsla OS</title>
+<meta name="description" content="Why every Vizsla OS application ships as a single AppImage file — and an honest comparison with Flatpak, .deb packages and Snap, including what AppImage costs us.">
+<link rel="stylesheet" href="style.css">
+<link rel="icon" href="assets/favicon.ico" sizes="any">
+<link rel="icon" type="image/png" href="assets/favicon.png">
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="site">
+  <div class="wrap">
+    <a class="brand" href="index.html" aria-label="Vizsla OS — home">
+      <img src="assets/vizsla-mark.jpg" width="38" height="38" alt="">
+      <span class="wordmark">VIZSLA</span>
+    </a>
+    <nav class="main" aria-label="Main">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="why.html">Why Vizsla?</a></li>
+        <li><a href="story.html">The Story</a></li>
+        <li><a href="dogs.html">Meet our dogs</a></li>
+        <li><a href="inside.html">What&rsquo;s inside</a></li>
+        <li><a href="phone-and-texting.html">Phone &amp; texting</a></li>
+        <li><a href="tv.html">TV Launcher</a></li>
+        <li><a href="arcade.html">Vizsla Arcade</a></li>
+        <li><a href="future.html">Future developments</a></li>
+        <li><a href="furniture.html">Furniture &amp; appearance</a></li>
+        <li><a href="shelf.html">The Shelf</a></li>
+        <li><a href="install.html">Install &amp; Ferry</a></li>
+        <li><a href="savings.html">Savings</a></li>
+        <li><a href="kindness.html">Kindness &amp; privacy</a></li>
+        <li><a href="feedback.html">Get involved</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main id="main" class="wrap">
+  <div class="pagehead">
+    <p class="eyebrow">How Vizsla apps ship</p>
+    <h1>One app, one file: why we chose AppImage</h1>
+    <p class="lede">Every application in Vizsla OS ships as a single
+    <strong>AppImage</strong> file &mdash; one file you can hold, copy, check,
+    keep, or delete. Linux has other ways to package software, and some of them
+    are good. This page explains the choice honestly: what AppImage gives us,
+    what the alternatives genuinely do better, and what AppImage costs us &mdash;
+    said out loud, the way we try to say everything here.</p>
+  </div>
+
+  <section class="block">
+    <h2>The short answer</h2>
+    <p>An AppImage is a whole application packed into one file. There is no
+    installer in the usual sense: you place the file on the machine, and the
+    app runs. Remove it by deleting the file. Go back to the version before by
+    keeping that file and running it instead. Nothing else on the system is
+    touched &mdash; no shared parts are swapped under other programs, and no
+    part of the app is scattered across the disk where only a package manager
+    can find it.</p>
+    <p>Vizsla publishes its applications through its own catalog, in numbered
+    <strong>generations</strong>. Every file in a generation carries a
+    published fingerprint &mdash; a SHA-256 checksum &mdash; and the file that
+    lands on every machine is checked against it, byte for byte. The app on
+    one Vizsla machine is not <em>probably</em> the same as the app on another.
+    It is provably the same file.</p>
+  </section>
+
+  <section class="block">
+    <h2>Why this shape fits Vizsla</h2>
+    <div class="cards">
+      <div class="card">
+        <h3>One file is the whole app</h3>
+        <p class="does">Install means <em>put the file here</em>. Uninstall
+        means <em>delete it</em>. Rollback means <em>run the previous file</em>
+        &mdash; and Vizsla keeps the outgoing version when a new generation
+        lands, so going back is a fact, not a hope. If you can manage a folder
+        of photographs, you already understand how Vizsla software is
+        installed.</p>
+        <p class="beats"><strong>Why it matters:</strong> a program you can
+        point at is a program you can reason about. Nothing hides in a
+        database, a cache, or a transaction log.</p>
+      </div>
+      <div class="card">
+        <h3>No root, no daemon, no gatekeeper</h3>
+        <p class="does">An AppImage runs entirely in your own user space. It
+        needs no administrator password to install, no background service
+        supervising it, and no app store&rsquo;s permission to exist. Vizsla
+        apps travel from the people who build them to the people who run them
+        through Vizsla&rsquo;s own catalog &mdash; nobody in between can
+        approve, delay, or quietly remove them.</p>
+        <p class="beats"><strong>Why it matters:</strong> software that needs
+        a gatekeeper&rsquo;s blessing can be un-blessed. Ours can&rsquo;t.</p>
+      </div>
+      <div class="card">
+        <h3>The same file on every base</h3>
+        <p class="does">The machines Vizsla is built and tested on do not all
+        run the same underlying Linux base, and the base has changed before
+        &mdash; it will change again; that is planned, not feared. Because an
+        AppImage carries what it needs with it, the identical file runs across
+        those bases. A new base does not mean rebuilding, re-testing, and
+        re-shipping every application.</p>
+        <p class="beats"><strong>Why it matters:</strong> an operating system
+        that intends to outlive its foundations cannot weld every app to one
+        of them.</p>
+      </div>
+      <div class="card">
+        <h3>Yours to keep, offline and forever</h3>
+        <p class="does">Download a Vizsla app once and it is yours in the plain
+        sense: the file works with the internet unplugged, it cannot be
+        revoked or delisted by a vendor, and nobody can reach into your machine
+        and change it overnight. Keep a shelf of older versions and they will
+        still run years from now.</p>
+        <p class="beats"><strong>Why it matters:</strong> this is the same
+        promise Vizsla makes about your files, applied to the programs
+        themselves.</p>
+      </div>
+      <div class="card">
+        <h3>Versions on purpose</h3>
+        <p class="does">A catalog generation <em>is</em> the version story.
+        New generations are published deliberately, with names and
+        fingerprints, and a machine moves to one when its owner says so &mdash;
+        never because a store decided tonight was the night. There are no
+        silent forced updates in Vizsla, because the format has no mechanism
+        to force one.</p>
+        <p class="beats"><strong>Why it matters:</strong> an update you
+        didn&rsquo;t choose, arriving mid-week, changing the tool you rely on,
+        is a landlord&rsquo;s habit. We are not building a landlord.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="block">
+    <h2>The other formats, fairly</h2>
+    <p>None of the alternatives is foolish, and two of them are genuinely
+    excellent at what they aim at. If we only listed their faults, you should
+    not trust the list. Here is each one at its best, and then the specific
+    reason it is not Vizsla&rsquo;s official format.</p>
+
+    <table class="savings">
+      <thead>
+        <tr><th></th><th>AppImage</th><th>Flatpak</th><th>.deb</th><th>Snap</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>What you get</td><td>One file per app</td><td>An app plus a shared runtime, from a store</td><td>A package installed into the system by a package manager</td><td>A packaged app, served and supervised by a background service</td></tr>
+        <tr><td>Administrator password to install</td><td>No</td><td>No, for store installs</td><td>Yes</td><td>Yes, once, for the service</td></tr>
+        <tr><td>Who can keep an app from you</td><td>Nobody &mdash; the file is yours</td><td>The store can delist it</td><td>The distribution&rsquo;s repositories can drop it</td><td>The store&rsquo;s one vendor controls the only store</td></tr>
+        <tr><td>Updates</td><td>When you take a new catalog generation</td><td>Through the store, largely automatic</td><td>With the rest of the system, by the package manager</td><td>Automatic, on the store&rsquo;s schedule &mdash; postponable, not declinable</td></tr>
+        <tr><td>Sandboxing</td><td>None by default</td><td>Yes &mdash; its great strength</td><td>None by default</td><td>Yes, confinement built in</td></tr>
+        <tr><td>Runs across different Linux bases</td><td>Yes &mdash; the same file</td><td>Yes, wherever the runtime is installed</td><td>No &mdash; built for one distribution and release</td><td>Yes, wherever its service runs</td></tr>
+        <tr><td>Works fully offline, forever</td><td>Yes</td><td>Installed apps run offline; getting them needs the store</td><td>Installed packages run offline</td><td>Installed apps run offline; the service expects its store</td></tr>
+      </tbody>
+    </table>
+
+    <h3>Flatpak &mdash; the strongest alternative</h3>
+    <p>Flatpak is good technology, honestly built: real sandboxing, shared
+    runtimes so apps stay lean, and a large public catalog. For third-party
+    software you do not know, its sandbox is a genuine protection, and we say
+    so without a smirk. It is not our official format for two reasons. First,
+    the sandbox is also a wall: Vizsla&rsquo;s own programs do deep system
+    work &mdash; a fingerprint reader at the lock screen, GPS hardware, the
+    panel and the lock screen themselves, shared machinery between apps
+    &mdash; and a format designed to keep apps away from the system fights
+    the programs whose job <em>is</em> the system. Second, distribution runs
+    through a store and its runtimes and review. Vizsla publishes through its
+    own catalog, on its own generations, and a format that routes around that
+    would route around the promise.</p>
+
+    <h3>.deb &mdash; the native package</h3>
+    <p>The Debian package is the old, proven way: fast, native, integrated
+    with the system by a package manager with decades of mileage. On a single
+    stable system, it is entirely respectable. It fails Vizsla on geography
+    and on manners. A .deb is built for one distribution and one release of
+    it; Vizsla runs across bases, and the same artifact must ship everywhere.
+    Installing one runs scripts as the administrator and can pull, upgrade, or
+    remove other parts of the system to satisfy its needs &mdash; one app&rsquo;s
+    install becomes a negotiation with everything else you own. And when a
+    package transaction goes wrong, what it leaves behind is not a file you
+    can delete; it is a system to repair.</p>
+
+    <h3>Snap &mdash; the vendor&rsquo;s format</h3>
+    <p>Snap has real engineering in it: transactional updates and confinement
+    are features, not marketing. But a Snap cannot exist without its
+    background service, its store is run by one company as the only store
+    there is, and that store&rsquo;s server side is not open &mdash; the
+    format has a landlord built into its foundations. Updates refresh on the
+    store&rsquo;s schedule whether or not the moment suits you, and the
+    format has long been criticized for slow first starts. Vizsla&rsquo;s
+    founding argument is that nobody should stand between a person and their
+    own computer. Snap stands there by design.</p>
+  </section>
+
+  <section class="block">
+    <h2>What AppImage costs us &mdash; said out loud</h2>
+    <p>A page that only praised its own choice would be an advertisement.
+    AppImage has real weaknesses, and we accept them with our eyes open:</p>
+    <ul class="principles">
+      <li><strong>The files are bigger.</strong> Each app carries its own
+      libraries instead of sharing the system&rsquo;s, so a shelf of apps
+      weighs more than the same shelf installed the native way. Disk space is
+      the price of one-file independence; we pay it knowingly.</li>
+      <li><strong>No shared-library patching.</strong> When a system library
+      is fixed, native packages heal everywhere at once. An AppImage carries
+      its own copy, so the fix only reaches it when the app is rebuilt. Our
+      answer is the catalog itself: when a library is fixed, the affected apps
+      are rebuilt and republished as a new generation &mdash; the discipline
+      is ours to keep, and it is a discipline, not a mechanism.</li>
+      <li><strong>No update channel of its own.</strong> An AppImage will
+      never nag you, because it cannot update itself at all. Vizsla&rsquo;s
+      catalog generations are the channel: visible, numbered, and taken when
+      the owner chooses.</li>
+      <li><strong>No sandbox by default.</strong> AppImage does not wall an
+      app off from your files the way Flatpak does. Vizsla&rsquo;s own
+      applications are first-party programs, written for this system and
+      published with their fingerprints in the open &mdash; we choose trust
+      you can verify over a wall our own system programs would spend their
+      lives climbing. For software from strangers, that trade deserves a
+      second thought, and this page will not pretend otherwise.</li>
+    </ul>
+    <p class="diff">The pattern underneath all four: AppImage moves work from
+    machinery to us. Nothing is automatic, supervised, or enforced by the
+    format itself &mdash; the catalog, the fingerprints, and the generations
+    are habits Vizsla keeps on purpose. We would rather keep a promise
+    ourselves than rent one from a format.</p>
+  </section>
+
+  <section class="block">
+    <h2>What this means for you</h2>
+    <p>Most days, nothing &mdash; and that is rather the point. Your apps are
+    files, in a place you can find, that you can copy to a stick, lend to a
+    neighbour&rsquo;s machine, archive against a rainy decade, or delete
+    without ceremony. The roster of what ships this way is on
+    <a href="inside.html">What&rsquo;s inside</a>, and how Vizsla itself
+    arrives on a machine is on <a href="install.html">Install &amp; Ferry</a>.
+    If a program of ours ever stops deserving its place on your disk, the
+    removal instructions are one sentence long: delete the file. It was
+    always yours.</p>
+  </section>
+</main>
+
+<footer class="site">
+  <div class="wrap">
+    <div class="cols">
+      <div>
+        <strong>Vizsla OS</strong><br>
+        Built in Leesburg, Florida, by Richard Garrison<br>
+        and the AI he directs.
+        <p class="contactline">Contact: <a href="mailto:garrison.richard@proton.me">garrison.richard@proton.me</a><br>
+        <a href="https://instagram.com/richardgarrisonia">Instagram</a> &middot;
+        <a href="https://facebook.com/richard.garrison.731917">Facebook</a> &middot;
+        <a href="https://www.linkedin.com/in/garrisonrichard">LinkedIn</a></p>
+      </div>
+      <div>
+        <a href="why.html">Why Vizsla?</a><br>
+        <a href="story.html">The Story</a><br>
+        <a href="dogs.html">Meet our dogs</a><br>
+        <a href="inside.html">What&rsquo;s inside</a><br>
+        <a href="phone-and-texting.html">Phone &amp; texting</a><br>
+        <a href="tv.html">TV Launcher</a><br>
+        <a href="arcade.html">Vizsla Arcade</a><br>
+        <a href="future.html">Future developments</a><br>
+        <a href="furniture.html">Furniture &amp; appearance</a><br>
+        <a href="hardware.html">Tested hardware</a><br>
+        <a href="app-format.html">How Vizsla apps ship</a><br>
+        <a href="shelf.html">The Shelf</a><br>
+        <a href="install.html">Install &amp; Ferry</a><br>
+        <a href="savings.html">What you stop paying for</a><br>
+        <a href="kindness.html">Kindness &amp; privacy</a><br>
+        <a href="feedback.html">Get involved</a>
+      </div>
+      <div>
+        In active development.<br>
+        No download yet &mdash; honestly.<br>
+        <a href="inside.html#try-profiler">Except System Profiler &mdash; try it today</a>
+      </div>
+    </div>
+    <p class="fineprint">Sources: the live Family Catalog and the fleet&rsquo;s own
+    publish records, read November 2026. This site sets
+    no cookies and runs no trackers.</p>
+  </div>
+</footer>
+</body>
+</html>
