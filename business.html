@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Business tools — Vizsla OS</title>
-<meta name="description" content="The Vizsla shelf for organizations: IDenty Pro, the lifelong person record institutions share instead of re-keying, and a self-hosted newsletter tool. Server software, honestly labelled as in development.">
+<meta name="description" content="The Vizsla shelf for organizations: IDenty Pro, the lifelong person record institutions share instead of re-keying — and an honest account of why the big HR platforms (Workday, UKG) are broken, with real screenshots of the working build. Plus a self-hosted newsletter tool.">
 <link rel="stylesheet" href="style.css">
 <link rel="icon" href="assets/favicon.ico" sizes="any">
 <link rel="icon" type="image/png" href="assets/favicon.png">
@@ -79,8 +79,219 @@
     product designed from the start to run on a central server for an
     organization, because a record shared by institutions cannot live on one
     person&rsquo;s laptop. Its honest state: <strong>in development</strong>.
-    There is no download and no finished product &mdash; this page is its
-    introduction, not its release.</p>
+    There is no download and no finished product &mdash; but it is far enough
+    along to show, not just describe. Every screenshot on this page is a real
+    capture of the current build, running on fictional demo people.</p>
+
+    <figure class="shot">
+      <img src="assets/identy-start.jpg" width="1600" height="1000" alt="IDenty Pro&rsquo;s start screen for an HR manager: a greeting, six pinned tiles (Chase Board, Approvals, My Team, Messages, Payroll, My Schedule), and her own record below" loading="lazy">
+      <figcaption><strong>The start screen.</strong> One system, one sign-in: the
+      chasing, the approvals, the team, the messages, and the payroll are tiles
+      on the same record &mdash; not five products with five logins.</figcaption>
+    </figure>
+
+    <h2>Why the big HR platforms are broken</h2>
+    <p>IDenty Pro exists because the systems it would replace &mdash; Workday
+    and UKG are the names at the top of the market &mdash; fail in ways that
+    are structural, not accidental. If you have ever administered one, you
+    already know this list. Here it is in plain words.</p>
+
+    <h3>The price is a second payroll</h3>
+    <p>The big platforms are priced per employee, per month, <em>per
+    module</em>: HR in one line item, timekeeping in another, recruiting in a
+    third, learning in a fourth. Before any of that, the implementation &mdash;
+    a project with a partner firm and a timeline measured in quarters, billed
+    like construction. After it, the annual increase, because the contract
+    says so. A mid-size company can end up paying more for the software that
+    tracks its people than it pays some of the people.</p>
+
+    <h3>&ldquo;One platform&rdquo; is several products in a trench coat</h3>
+    <p>UKG is what happened when Kronos and Ultimate Software merged &mdash;
+    two companies&rsquo; systems, still being stitched together years later.
+    Workday grew the same way, by acquisition. Payroll lives in one product,
+    time in another, recruiting in a third, and your people&rsquo;s data is
+    copied between them on a schedule. The copies disagree. Everyone who has
+    run one of these systems has a story about which copy was wrong.</p>
+
+    <h3>&ldquo;Integrated&rdquo; means somebody bills you for the plumbing</h3>
+    <p>Every connection &mdash; to an insurance carrier, a bank, a badge
+    system, a background-check firm &mdash; is an integration: scoped, built,
+    tested, and maintained, usually by a consultant. Change a field on one
+    side and the interface breaks on the other. The vendors call this an
+    ecosystem. It is a toll road.</p>
+
+    <h3>Simple things need custom development</h3>
+    <p>A new approval chain. A report your auditor actually asked for. A
+    hiring form that matches how your company really hires. In theory:
+    configuration. In practice: a statement of work. The honest answer to
+    &ldquo;can it do that?&rdquo; is &ldquo;our partners can build it&rdquo;
+    &mdash; at day rates, on their calendar, in a way the next upgrade may or
+    may not respect.</p>
+
+    <h3>The same person is typed in five times</h3>
+    <p>Applicant tracking, HR, payroll, time, learning, badges &mdash; each
+    system wants the human re-keyed, and each copy rots at its own speed. A
+    name spelled three ways. A termination that reaches payroll but never
+    reaches the door badges. That is not a data-entry problem; it is what
+    happens when a person&rsquo;s record has five homes instead of one.</p>
+
+    <h3>The people doing the work get the worst screens</h3>
+    <p>The executive gets a dashboard. The driver, the nurse, the
+    teacher&rsquo;s aide &mdash; the people who clock in, swap shifts, and
+    wonder why a check changed &mdash; get the clunkiest corner of the
+    product and a phone queue. Their requests go in and are never seen again:
+    no status, no name attached, just <em>pending</em>.</p>
+
+    <h3>You rent your own people&rsquo;s history</h3>
+    <p>The record of who worked, what they earned, and what they were
+    certified to do sits in the vendor&rsquo;s cloud, metered by the seat.
+    Getting it out &mdash; really out, all of it, in a shape you can use
+    &mdash; is its own project, quoted separately. Leaving is priced to make
+    you stay.</p>
+
+    <h2>What IDenty Pro does instead</h2>
+
+    <h3>One record, typed once</h3>
+    <p>A person is entered once and verified once, and every institution that
+    person meets reads the same record. In the demo data below, one
+    driver&rsquo;s single timeline carries two employers, his CDL, his DOT
+    medical card, and his pay &mdash; school, training, and work in one place,
+    because in a life they were never separate.</p>
+    <figure class="shot">
+      <img src="assets/identy-record.jpg" width="1600" height="1000" alt="One driver&rsquo;s person record: a single timeline showing an onboarding job at one hauling company and his active driver job at another, on the same record" loading="lazy">
+      <figcaption><strong>One record across employers.</strong> Two companies,
+      one timeline. Nothing was re-keyed when he changed jobs &mdash; the
+      record is the person&rsquo;s, and institutions attach to it.</figcaption>
+    </figure>
+
+    <h3>Everything is the same system, so nothing needs integrating</h3>
+    <p>Payroll, time, scheduling, leave, recruiting, compliance, support
+    tickets, forms, badges, and the truck keys all read and write the one
+    record. There is no interface to break because there is no second system.
+    The payroll below is not a module bought from somebody else: the
+    gross-to-net engine &mdash; federal brackets, FICA, W-4, garnishments
+    &mdash; is part of the record, and it says so on its own page.</p>
+    <figure class="shot">
+      <img src="assets/identy-payroll.jpg" width="1600" height="1000" alt="The payroll screen: a plain-words explanation of the gross-to-net engine, then the pay-profile form and pay runs" loading="lazy">
+      <figcaption><strong>Payroll, owned outright.</strong> The calculation
+      lives in the same system as the hours and the record &mdash; and any
+      worker can open &ldquo;why is my check different?&rdquo; on their own
+      record and read the arithmetic in plain words, garnishments included.
+      No ticket. No phone call to HR.</figcaption>
+    </figure>
+
+    <h3>Requests cannot vanish</h3>
+    <p>Every request carries a status and the <em>name</em> of the human
+    deciding it. Nothing sits in an anonymous &ldquo;pending.&rdquo; A
+    manager&rsquo;s request to hire is a structured form &mdash; title from a
+    catalog, headcount, start date, work location, orientation location,
+    supervisor, pay band &mdash; and it walks four approvals in order:
+    supervisor, leadership, HR, finance. Each signer certifies in words the
+    system keeps verbatim, and nobody can approve their own request. When the
+    last signature lands, the approved request <em>posts the job itself</em>.
+    No re-typing it into a second system, because there isn&rsquo;t one.</p>
+    <figure class="shot">
+      <img src="assets/identy-requisitions.jpg" width="1600" height="1000" alt="The requisitions board: three position requests with statuses &mdash; two waiting for approval showing whose step they are on, one posted" loading="lazy">
+      <figcaption><strong>The requisitions board.</strong> Every position
+      request in the house, each saying exactly how many of its four approvals
+      are in and whose desk it is sitting on.</figcaption>
+    </figure>
+    <figure class="shot">
+      <img src="assets/identy-requisition-detail.jpg" width="1600" height="1000" alt="One approved requisition in full: Safety Coordinator, one FTE, Leesburg terminal, salary band $58,000 to $72,000, the business case, and all four approvals with names, dates, and the certification sentence each signer agreed to" loading="lazy">
+      <figcaption><strong>An approved request, in full.</strong> The form, the
+      money, the reason &mdash; and all four signatures, each with the
+      certification sentence the signer actually agreed to. The button at the
+      bottom goes to the job this request became.</figcaption>
+    </figure>
+
+    <h3>The system does the chasing</h3>
+    <p>Expiring licenses, missing forms, aging tickets, PPE past its
+    replace-by date: one board, computed from the live record and stamped
+    with the time it was computed. In the big platforms this work lives in
+    somebody&rsquo;s inbox and memory, and it is the first thing that slips
+    when that person goes on vacation.</p>
+    <figure class="shot">
+      <img src="assets/identy-chase.jpg" width="1600" height="1000" alt="The Chase Board: overdue support tickets flagged urgent, computed from the live record with an as-of timestamp" loading="lazy">
+      <figcaption><strong>The Chase Board.</strong> &ldquo;This list is what HR
+      used to hold in their heads and their inboxes.&rdquo; Now the system
+      holds it.</figcaption>
+    </figure>
+
+    <h3>Access and property come from the same record</h3>
+    <p>Hired, and the accounts, the badge, the laptop, the uniform, and the
+    truck appear &mdash; driven by the job on the record, not by a ticket to
+    IT. The badge is generated by the system itself. A vehicle cannot be
+    handed to a driver whose CDL or medical card has lapsed; the record
+    refuses. Gone, and sign-ins stop the same day, shared work gets a
+    handover window, and an exit certificate states exactly what came back.
+    In the big-platform world this is three more products and a spreadsheet.
+    Here it is the same record, doing what a record is for.</p>
+    <div class="gallery">
+      <figure>
+        <img src="assets/identy-access-admin.jpg" width="1600" height="1000" alt="The Access and Property administration view: accounts waiting to be provisioned and the property registry" loading="lazy">
+        <figcaption><strong>The property desk.</strong> Accounts, devices,
+        vehicles, uniforms, and PPE in one registry, worked from one
+        queue.</figcaption>
+      </figure>
+      <figure>
+        <img src="assets/identy-my-access.jpg" width="1600" height="1000" alt="A driver&rsquo;s own Access and Property page: the accounts he can sign into, each marked Active, with a plain-words explanation of what happens to them if he leaves" loading="lazy">
+        <figcaption><strong>The worker&rsquo;s own view.</strong> Everything
+        the job gives him, and what happens to it if he leaves &mdash; written
+        down where he can read it before it matters.</figcaption>
+      </figure>
+      <figure>
+        <img src="assets/identy-badge.jpg" width="1600" height="1000" alt="A generated ID badge: James Okafor, CDL Driver — Regional, Sunbelt Freight Lines, badge B-1003, status ACTIVE, issued 2025-03-03" loading="lazy">
+        <figcaption><strong>The badge, generated in-house.</strong> Issued
+        from the record, carrying the record&rsquo;s status. When the record
+        says gone, the badge says so too.</figcaption>
+      </figure>
+    </div>
+
+    <h3>Built for the institutions the giants underserve</h3>
+    <p>A residency program gets its graduate-medical-education machinery
+    &mdash; milestones, procedure counts, duty hours, accreditation windows
+    &mdash; in the same record the hospital hires from. A school district
+    gets classes and state reports. Nobody buys a second platform for the
+    training years, and nobody re-keys a resident into a separate trainee
+    system for three years and back out again.</p>
+    <figure class="shot">
+      <img src="assets/identy-gme.jpg" width="1600" height="1000" alt="The GME Office view: the residency program&rsquo;s accreditation calendar, milestone windows, and trainee standing" loading="lazy">
+      <figcaption><strong>The GME Office.</strong> Residency machinery that
+      the big HR platforms simply do not have &mdash; because in their world,
+      training is somebody else&rsquo;s product.</figcaption>
+    </figure>
+
+    <h3>Help lives in the building</h3>
+    <p>The support desk and the how-to library are part of the same system,
+    reading the same record. A worker&rsquo;s ticket about a forklift and the
+    article that answers the next worker&rsquo;s question live one search
+    apart, and the people who fix things can see the record of the person
+    asking. No separate helpdesk contract, no knowledge base in a fourth
+    cloud.</p>
+    <div class="gallery">
+      <figure>
+        <img src="assets/identy-support.jpg" width="1600" height="1000" alt="The support desk: tickets with categories, priorities, and response-time targets" loading="lazy">
+        <figcaption><strong>The support desk.</strong> Tickets carry response
+        targets stamped when they are filed &mdash; and an agent can never be
+        assigned their own ticket.</figcaption>
+      </figure>
+      <figure>
+        <img src="assets/identy-wiki.jpg" width="1600" height="1000" alt="The built-in how-to library: searchable articles with a suggestion workflow for corrections" loading="lazy">
+        <figcaption><strong>The how-to library.</strong> Anyone can suggest a
+        correction; an editor approves it, and the credit lands on the
+        suggester&rsquo;s own record.</figcaption>
+      </figure>
+    </div>
+
+    <h3>It costs what a server costs</h3>
+    <p>IDenty Pro is free and open-source. It runs on one ordinary machine,
+    on the institution&rsquo;s own hardware, and the data never leaves the
+    building unless the institution sends it. There is no per-seat rent, no
+    module menu, and no exit project &mdash; the record was always yours.
+    The honest limits, stated as plainly as the rest: it is in active
+    development, it is not a finished product, and nobody should run a real
+    payroll on it yet. What it already is, is proof that the shape works:
+    one record, one system, no toll roads.</p>
 
     <h2>A newsletter tool, self-hosted</h2>
     <p>The second member of this shelf is not Vizsla&rsquo;s own software, and
@@ -115,7 +326,9 @@
     is on the <a href="donate.html">Donate</a> page.</p>
 
     <h2>The honest state of this shelf</h2>
-    <p>Young, and not pretending otherwise. IDenty Pro is being built; the
+    <p>Young, and not pretending otherwise. IDenty Pro is being built &mdash;
+    the screenshots above are the current build, honestly labelled, not a
+    mockup of a someday product; the
     newsletter tool is a planned adoption. When either is ready for outside
     hands, this page will say so in as many words, with the download or the
     deployment beside it. Until then, organizations curious about either are
