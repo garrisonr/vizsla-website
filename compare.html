@@ -34,6 +34,14 @@ table.compare tr.hl td.feat{background:var(--mat)}
 table.compare tr.hl td.idc{background:var(--mat)}
 table.compare th.mk{text-align:center}
 .prose h3.grp{margin-top:2.2rem}
+body.cmp-page{-webkit-text-size-adjust:100%;text-size-adjust:100%}
+@media (max-width:44rem){
+.cmpwrap{padding:.25rem .5rem .45rem;border-radius:.8rem}
+table.compare{font-size:.86rem;min-width:54rem;line-height:1.4}
+table.compare th,table.compare td{padding:.45rem .5rem}
+table.compare th:first-child,table.compare td.feat{width:8.25rem;min-width:8.25rem;max-width:8.25rem}
+table.compare th:nth-child(2),table.compare td.idc{left:8.25rem;min-width:8.75rem}
+}
 </style>
 </head>
 <body class="cmp-page">
