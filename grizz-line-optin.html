@@ -35,6 +35,37 @@ Msg freq may vary. Std msg &amp; data rates apply. Reply STOP to opt out,
 HELP for help. We will not share or sell your mobile information for
 marketing/promotional purposes."</em></p>
 
+<h2>Opt-in form</h2>
+<p>You can also start your opt-in here. Enter your mobile number, check
+the consent box — it is <strong>never checked for you</strong> — and press
+the button. Your messaging app will open with START ready to send to
++1 352-531-2029; your opt-in is complete when you send that text and
+receive the confirmation above.</p>
+<form id="optin-form">
+<p><label for="optin-phone">Mobile phone number</label><br>
+<input type="tel" id="optin-phone" name="phone" autocomplete="tel" required placeholder="(352) 555-0123"></p>
+<p><label><input type="checkbox" id="optin-consent" name="consent" required>
+I agree to receive text messages from Richard Garrison at the mobile
+number I provide, about my job application and onboarding (welcome
+messages, paperwork reminders, orientation and first-day details).
+Message frequency varies. Message and data rates may apply. Reply STOP
+to opt out, HELP for help. Consent is not a condition of applying for a
+job or of employment.</label></p>
+<p><button type="submit">Text START to opt in</button></p>
+<p class="small" id="optin-note"></p>
+</form>
+<script>
+document.getElementById('optin-form').addEventListener('submit', function (e) {
+  e.preventDefault();
+  var box = document.getElementById('optin-consent');
+  if (!box.checked) {
+    document.getElementById('optin-note').textContent = 'Please check the consent box first — it is left unchecked on purpose, so the choice is yours.';
+    return;
+  }
+  window.location.href = 'sms:+13525312029?&body=START';
+});
+</script>
+
 <div class="terms">
 <h2 style="margin-top:0">Messaging terms</h2>
 <p><strong>Message frequency varies</strong> by onboarding stage; most
