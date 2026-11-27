@@ -802,3 +802,8 @@ html.v3-armed .v3-card.k-tabloid .v3-photo{aspect-ratio:auto;height:5.5rem}
 .gallery.framedgrid{grid-template-columns:repeat(3,1fr)}
 @media (max-width:60rem){ .gallery.framedgrid{grid-template-columns:repeat(2,1fr)} }
 @media (max-width:40rem){ .gallery.framedgrid{grid-template-columns:1fr} }
+
+/* For Businesses nav button — consumer/business split (2026-11-27) */
+nav.main a.navbiz{background:var(--russet);color:#fff;font-weight:650}
+nav.main a.navbiz:hover{background:var(--russet-deep);color:#fff}
+@media (prefers-color-scheme:dark){ nav.main a.navbiz{color:#241708} nav.main a.navbiz:hover{color:#241708} }
