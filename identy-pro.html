@@ -9,6 +9,44 @@
 <link rel="icon" href="assets/favicon.ico" sizes="any">
 <link rel="icon" type="image/png" href="assets/favicon.png">
 <script>if(!window.matchMedia('(prefers-reduced-motion: reduce)').matches){document.documentElement.classList.add('v3-armed');}if(new URLSearchParams(location.search).has('stage')){document.documentElement.classList.add('v3-qa');}</script>
+<style>
+  .vp-join{
+    background:var(--bg-raise); border:1px solid var(--line); border-radius:1.25rem;
+    padding:1.6rem 1.7rem 1.4rem; margin:1.6rem 0 2.2rem; max-width:46rem;
+    box-shadow:0 1px 2px rgba(38,32,26,.05), 0 12px 32px -18px rgba(38,32,26,.28);
+  }
+  @media (prefers-color-scheme:dark){
+    .vp-join{box-shadow:0 1px 2px rgba(0,0,0,.4), 0 12px 32px -18px rgba(0,0,0,.7)}
+  }
+  .vp-join h3{font-family:var(--font-display); font-size:1.5rem; margin:.1rem 0 .4rem}
+  .vp-join .vp-sub{color:var(--ink-muted); margin:0 0 1.1rem; font-size:1.02rem}
+  .vp-join label{
+    display:block; font-family:var(--font-ui); font-weight:600; font-size:.92rem;
+    margin:0 0 .9rem;
+  }
+  .vp-join input{
+    display:block; width:100%; box-sizing:border-box; margin-top:.35rem;
+    font-family:var(--font-ui); font-size:1.05rem; color:var(--ink);
+    background:var(--bg); border:1px solid var(--line); border-radius:.75rem;
+    padding:.75rem 1rem;
+  }
+  .vp-join input:focus{outline:3px solid var(--russet); outline-offset:1px; border-color:var(--russet)}
+  .vp-join .vp-opt{font-weight:400; color:var(--ink-muted); font-size:.85rem}
+  .vp-join button{
+    font-family:var(--font-ui); font-size:1.05rem; font-weight:650; cursor:pointer;
+    background:var(--russet); color:#fff; border:none; border-radius:999px;
+    padding:.8rem 1.9rem; margin-top:.2rem;
+  }
+  .vp-join button:hover{background:var(--russet-deep)}
+  @media (prefers-color-scheme:dark){ .vp-join button{color:#241708} }
+  .vp-join .vp-promises{
+    list-style:none; margin:1.2rem 0 0; padding:1rem 0 0; border-top:1px solid var(--line);
+    font-family:var(--font-ui); font-size:.95rem; color:var(--ink-muted);
+    display:grid; gap:.4rem;
+  }
+  .vp-join .vp-promises strong{color:var(--ink)}
+  .vp-hp{position:absolute; left:-9999px; width:1px; height:1px; overflow:hidden}
+</style>
 </head>
 <body>
 <a class="skip" href="#main">Skip to content</a>
@@ -695,18 +733,53 @@
         <figcaption><strong>Karen Doyle.</strong> Teacher, Grade 2, Anytown Elementary.</figcaption>
       </figure>
     </div>
-    <h2>A newsletter tool, self-hosted</h2>
-    <p>The second member of this shelf is not Vizsla&rsquo;s own software, and
-    the page says so plainly: it is <strong>Mailcheap</strong>, an open-source
-    newsletter tool (AGPL-licensed, by Marc Lou) that Vizsla plans to seat here
-    for organizations that publish. You write an issue, send it to your list,
-    and the issue also publishes as a web page &mdash; the beehiiv-and-Substack
-    job, without handing your list to either of them.</p>
-    <p>It runs on your own server and sends through Amazon SES, so the list, the
+    <h2>Vizsla Post &mdash; the newsletter tool, ours</h2>
+    <p>The second member of this shelf is <a href="vizsla-post.html"><strong>Vizsla
+    Post</strong></a>, and this time the page gets to say the better thing:
+    it is Vizsla&rsquo;s own software, built here &mdash; a clean-room
+    reimplementation in Rust, written from the feature blueprint of
+    <strong>Mailcheap</strong>, Marc Lou&rsquo;s open-source newsletter app
+    (AGPL-3.0; no upstream code ships in it, and the credit is his). You
+    write an issue, send it to your list, and the issue also publishes as a
+    web page &mdash; the beehiiv-and-Substack job, without handing your
+    list to either of them.</p>
+    <p>It runs on our own server and sends through a provider the owner
+    chooses &mdash; our own Microsoft 365 mailbox, Amazon SES, PostShiba,
+    or an organization&rsquo;s own mail server &mdash; so the list, the
     sending, and the archive stay the organization&rsquo;s own. Its honest
-    state: <strong>a planned member of this shelf, not a shipped Vizsla
-    app</strong> &mdash; adopted, not built here, and sending stays switched off
-    until the mail plumbing behind it is properly configured.</p>
+    state: <strong>seated on our server now, and its first list is
+    opening</strong> &mdash; the form below is live, no issue has been sent
+    yet, and sending stays switched off until the mail plumbing behind it
+    is properly configured. Published issues collect in the
+    <a href="https://dell-sovereign-vizsla.tail82bf76.ts.net/archive/vizsla-os">public
+    archive</a>. The whole story is on the
+    <a href="vizsla-post.html">Vizsla Post page</a>.</p>
+
+    <div class="vp-join" id="join">
+      <p class="eyebrow">The Vizsla OS list</p>
+      <h3>News, when there&rsquo;s news.</h3>
+      <p class="vp-sub">Join the list this page is about. We&rsquo;ll send
+      a confirmation email &mdash; click its link and you&rsquo;re on.
+      That double opt-in is deliberate: nobody lands on this list by
+      accident, and nobody is added by anybody else.</p>
+      <form method="post" action="https://dell-sovereign-vizsla.tail82bf76.ts.net/join/vizsla-os">
+        <label>Email address
+          <input name="email" type="email" required autocomplete="email" placeholder="you@example.org">
+        </label>
+        <label>Your name <span class="vp-opt">(optional &mdash; it only personalizes the hello)</span>
+          <input name="name" type="text" autocomplete="name" placeholder="What should we call you?">
+        </label>
+        <div class="vp-hp" aria-hidden="true">
+          <label>Website<input name="website" type="text" tabindex="-1" autocomplete="off"></label>
+        </div>
+        <button type="submit">Join the list</button>
+      </form>
+      <ul class="vp-promises">
+        <li><strong>No spam, ever.</strong> News only when there&rsquo;s news.</li>
+        <li><strong>Unsubscribe in one click, anytime</strong> &mdash; in every email, effective immediately, no hard feelings.</li>
+        <li><strong>Your address is never sold or shared.</strong> Read the <a href="privacy.html">privacy policy</a> &mdash; it&rsquo;s short, and it means what it says.</li>
+      </ul>
+    </div>
 
     <h2>What this shelf runs on</h2>
     <p>Even the project&rsquo;s own mailbox pays rent. Vizsla&rsquo;s business
@@ -731,7 +804,8 @@
     <p>Young, and not pretending otherwise. IDenty Pro is being built &mdash;
     the screenshots above are the current build, honestly labelled, not a
     mockup of a someday product; the
-    newsletter tool is a planned adoption. When either is ready for outside
+    newsletter tool, Vizsla Post, is built and seated on our own server,
+    with its first list opening above. When either is ready for outside
     hands, this page will say so in as many words, with the download or the
     deployment beside it. Until then, organizations curious about either are
     welcome to write: <a href="mailto:admin@vizslaos.com">admin@vizslaos.com</a>.</p>
@@ -766,6 +840,7 @@
         <a href="install.html">Install &amp; Ferry</a><br>
         <a href="savings.html">What you stop paying for</a><br>
         <a href="kindness.html">Kindness &amp; privacy</a><br>
+        <a href="privacy.html">Privacy policy</a><br>
         <a href="feedback.html">Get involved</a>
       </div>
       <div>
@@ -774,7 +849,8 @@
         <a href="inside.html#try-profiler">Except System Profiler &mdash; try it today</a>
       </div>
     </div>
-    <p class="fineprint">No form, no cookies, no trackers &mdash; and no pretend inbox.
+    <p class="fineprint">One form &mdash; the Vizsla Post newsletter signup above, which
+    posts to our own server. No cookies, no trackers &mdash; and no pretend inbox.
     The links on this page are plain links, in the open, to places that exist.</p>
   </div>
     <p class="disclaimer">Vizsla OS is an independent, open-source project. It has no corporate or organizational sponsors, and it is not endorsed or approved by any company or organization. Product and company names mentioned on this site belong to their owners; using a name here doesn't imply endorsement or approval by — or of — anyone.</p>
