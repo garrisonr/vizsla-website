@@ -1,0 +1,578 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>IDenty Pro vs the Job Boards — Vizsla OS</title>
+<meta name="description" content="IDenty Pro measured against the 17 job boards — Indeed, LinkedIn, ZipRecruiter, Glassdoor, Monster, CareerBuilder, SimplyHired, Dice, Wellfound, Snagajob, Handshake, USAJobs, Google for Jobs, FlexJobs, We Work Remotely, Built In and Idealist — on what one hire actually costs, who really owns the market, and the 21 capabilities that decide whether a posting is yours or rented.">
+<link rel="stylesheet" href="style.css?v=4">
+<link rel="icon" href="assets/favicon.ico" sizes="any">
+<link rel="icon" type="image/png" href="assets/favicon.png">
+
+<style>
+
+body.cmp-page .wrap{max-width:min(110rem,97.5vw)}
+body.cmp-page .prose{max-width:none}
+body.cmp-page .prose p,body.cmp-page .prose li{max-width:52rem}
+.cmpwrap{overflow-x:auto;margin:1.2rem 0 2.2rem;-webkit-overflow-scrolling:touch;background:var(--bg-raise);border:1px solid var(--line);border-radius:1rem;padding:.35rem .8rem .55rem;scrollbar-width:thin}
+table.compare{table-layout:fixed;border-collapse:separate;border-spacing:0;width:100%;min-width:64rem;font-size:.95rem;line-height:1.45;font-variant-numeric:tabular-nums}
+table.compare caption{text-align:left;font-family:var(--font-display);font-size:1.15rem;font-weight:600;padding:.55rem 0 .35rem}
+table.compare th,table.compare td{box-sizing:border-box;border-top:1px solid var(--line);padding:.5rem .6rem;text-align:left;vertical-align:top}
+table.compare thead th{font-family:var(--font-display);font-size:.85rem;border-top:none;border-bottom:2px solid var(--line);background:var(--bg-raise)}
+table.compare th:first-child,table.compare td.feat{width:16.2rem;min-width:16.2rem;max-width:16.2rem}
+table.compare td.feat{font-weight:550;overflow-wrap:break-word}
+table.compare th:first-child,table.compare td.feat{position:sticky;left:0;background:var(--bg-raise);z-index:1}
+table.compare th:nth-child(2),table.compare td.idc{position:sticky;left:16.2rem;box-shadow:1px 0 0 var(--line);z-index:1}
+table.compare td.idc{background:var(--mat);width:15rem;overflow-wrap:break-word}
+table.compare th:nth-child(2){background:var(--mat);width:15rem}
+table.compare td.mk{text-align:center;white-space:nowrap}
+table.compare tbody tr:hover td{background:color-mix(in srgb,var(--ink) 4%,var(--bg-raise))}
+table.compare tbody tr:hover td.feat{background:color-mix(in srgb,var(--ink) 4%,var(--bg-raise))}
+table.compare tbody tr:hover td.idc{background:color-mix(in srgb,var(--ink) 4%,var(--mat))}
+table.compare tr.hl td{background:var(--mat);font-weight:600}
+table.compare tr.hl td.feat{background:var(--mat)}
+table.compare tr.hl td.idc{background:var(--mat)}
+table.compare th.mk{text-align:center}
+.prose h3.grp{margin-top:2.2rem}
+body.cmp-page{-webkit-text-size-adjust:100%;text-size-adjust:100%}
+@media (max-width:44rem){
+.cmpwrap{padding:.25rem .5rem .45rem;border-radius:.8rem}
+table.compare{font-size:.86rem;min-width:60rem;line-height:1.4}
+table.compare th,table.compare td{padding:.45rem .5rem}
+table.compare th:first-child,table.compare td.feat{width:8.25rem;min-width:8.25rem;max-width:8.25rem}
+table.compare th:nth-child(2),table.compare td.idc{left:8.25rem;width:8.75rem;min-width:8.75rem}
+}
+.partsec{border-top:2px solid var(--line);margin-top:1.8rem}
+.grpsec{border-top:1px solid var(--line);margin-top:.4rem}
+.partsec>summary,.grpsec>summary{cursor:pointer;list-style:none;display:flex;align-items:baseline;gap:.65rem;padding:.5rem 0 .35rem}
+.partsec>summary::-webkit-details-marker,.grpsec>summary::-webkit-details-marker{display:none}
+.partsec>summary::before,.grpsec>summary::before{content:"\25B8";flex:none;transition:transform .18s ease;color:color-mix(in srgb,var(--ink) 55%,transparent)}
+.partsec[open]>summary::before,.grpsec[open]>summary::before{transform:rotate(90deg)}
+.partsec>summary{font-size:1.32rem}
+.grpsec>summary{font-size:1.03rem}
+.partsec>summary h3,.grpsec>summary h3{display:inline;margin:0;font-size:inherit}
+summary .pcount{font-size:.76rem;font-weight:400;opacity:.62;white-space:nowrap}
+.cmptools{display:flex;gap:.5rem;margin:1rem 0 .2rem}
+.cmptools button{font:inherit;font-size:.85rem;padding:.38rem .85rem;border:1px solid var(--line);border-radius:2rem;background:var(--bg-raise);color:var(--ink);cursor:pointer}
+.cmptools button:hover{border-color:color-mix(in srgb,var(--ink) 40%,var(--line))}
+
+
+.plaintab{border-collapse:separate;border-spacing:0;width:100%;font-size:.95rem;line-height:1.5;font-variant-numeric:tabular-nums}
+.plaintab th,.plaintab td{border-top:1px solid var(--line);padding:.55rem .6rem;text-align:left;vertical-align:top}
+.plaintab thead th{font-family:var(--font-display);font-size:.88rem;border-top:none;border-bottom:2px solid var(--line);background:var(--bg-raise)}
+.plaintab td.board{font-weight:600;white-space:nowrap}
+.plaintab tr.hl td{background:var(--mat);font-weight:600}
+table.compare.jobs{min-width:118rem}
+.notes{font-size:.88rem;line-height:1.55}
+.notes li{margin:.3rem 0}
+.callout{background:var(--mat);border:1px solid var(--line);border-radius:1rem;padding:.85rem 1.05rem;margin:1.2rem 0}
+@media (max-width:44rem){table.compare.jobs{min-width:104rem}}
+
+</style>
+</head>
+<body class="cmp-page">
+<a class="skip" href="#main">Skip to content</a>
+<header class="site">
+  <div class="wrap">
+    <a class="brand" href="index.html" aria-label="Vizsla OS — home">
+      <img src="assets/vizsla-mark.jpg" width="38" height="38" alt="">
+      <span class="wordmark">VIZSLA</span>
+    </a>
+    <nav class="main navdesk" aria-label="Main">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="whats-new.html">What&rsquo;s new</a></li>
+        <li><a href="why.html">Why Vizsla?</a></li>
+        <li><a href="story.html">The Story</a></li>
+        <li><a href="dogs.html">Meet our dogs</a></li>
+        <li><a href="inside.html">What&rsquo;s inside</a></li>
+        <li><a href="phone-and-texting.html">Phone &amp; texting</a></li>
+        <li><a href="tv.html">TV Launcher</a></li>
+        <li><a href="arcade.html">Vizsla Arcade</a></li>
+        <li><a href="future.html">Future developments</a></li>
+        <li><a href="furniture.html">Furniture &amp; appearance</a></li>
+        <li><a href="shelf.html">The Shelf</a></li>
+        <li><a href="install.html">Install &amp; Ferry</a></li>
+        <li><a href="app-format.html">How Vizsla apps ship</a></li>
+        <li><a href="savings.html">Savings</a></li>
+        <li><a href="kindness.html">Kindness &amp; privacy</a></li>
+        <li><a href="business.html#identy-pro">IDenty Pro</a></li>
+        <li><a href="compare.html">Compare</a></li>
+        <li><a href="jobs-compare.html">Jobs</a></li>
+        <li><a href="business.html">Business tools</a></li>
+        <li><a href="donate.html">Donate</a></li>
+        <li><a href="feedback.html">Get involved</a></li>
+      </ul>
+    </nav>
+    <details class="navmob">
+      <summary>Menu</summary>
+      <nav class="main mainmob" aria-label="Main">
+        <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="whats-new.html">What&rsquo;s new</a></li>
+        <li><a href="why.html">Why Vizsla?</a></li>
+        <li><a href="story.html">The Story</a></li>
+        <li><a href="dogs.html">Meet our dogs</a></li>
+        <li><a href="inside.html">What&rsquo;s inside</a></li>
+        <li><a href="phone-and-texting.html">Phone &amp; texting</a></li>
+        <li><a href="tv.html">TV Launcher</a></li>
+        <li><a href="arcade.html">Vizsla Arcade</a></li>
+        <li><a href="future.html">Future developments</a></li>
+        <li><a href="furniture.html">Furniture &amp; appearance</a></li>
+        <li><a href="shelf.html">The Shelf</a></li>
+        <li><a href="install.html">Install &amp; Ferry</a></li>
+        <li><a href="app-format.html">How Vizsla apps ship</a></li>
+        <li><a href="savings.html">Savings</a></li>
+        <li><a href="kindness.html">Kindness &amp; privacy</a></li>
+        <li><a href="business.html#identy-pro">IDenty Pro</a></li>
+        <li><a href="compare.html">Compare</a></li>
+        <li><a href="jobs-compare.html">Jobs</a></li>
+        <li><a href="business.html">Business tools</a></li>
+        <li><a href="donate.html">Donate</a></li>
+        <li><a href="feedback.html">Get involved</a></li>
+        </ul>
+      </nav>
+    </details>
+  </div>
+</header>
+<main id="main" class="wrap">
+
+<div class="pagehead">
+<p class="eyebrow">Business tools</p>
+<h1>IDenty Pro vs the Job Boards</h1>
+</div>
+<article class="prose">
+<p>Every job board on this page sells the same thing under different
+paint: <strong>access to your own applicants</strong>. The employer pays
+per post, per slot, per click, or per &ldquo;sponsored&rdquo; boost in an
+auction against other employers. The application is born inside the
+platform&rsquo;s database, the candidate relationship belongs to the
+platform, and the platform rents it back — resume-database access,
+messaging credits, per-applicant fees. A posting deleted in one silo
+lives on in the others. And the ten names that started this page —
+LinkedIn, ZipRecruiter, Glassdoor, Monster, CareerBuilder, SimplyHired,
+Dice, Wellfound, Snagajob and Handshake — turn out to be about six
+independent sellers in 2026, once you add the seven columns an honest
+chart cannot omit: Indeed (the largest board in the country, and the
+posting engine behind two of the ten), USAJobs, Google for Jobs,
+FlexJobs, We Work Remotely, Built In and Idealist.</p>
+<p>IDenty Pro&rsquo;s answer is structural, not a discount. The posting
+belongs to the institution. It is published on the institution&rsquo;s
+own board, on its own instance, at $0 — the last step of a governed
+requisition, not a product in a store. The application is born in the
+same record that will run the employment. And with §88 — the jobs
+federation, specced and queued as this page is written — independent
+IDenty instances will repost each other&rsquo;s jobs directly,
+peer to peer, under each receiving admin&rsquo;s own policy rules.
+No platform in the middle, because there is nothing in the middle to
+charge rent.</p>
+<p><strong>How to read the marks.</strong> For the seventeen:
+✓ means the capability is a standard part of the product;
+<em>Partial</em> means it exists but is shallow, capped, or
+partner-delivered; — means it isn&rsquo;t offered; <em>Add-on</em>
+means the capability is real but sold as a separately priced extra on
+top of the product you already bought. For IDenty Pro the column uses
+words — <em>Yes</em>, <em>Partial</em>, <em>No</em> — with the
+specification section (§) that backs each grade. <strong>Planned</strong>
+means exactly that: specced, not built — and it is graded
+<strong>No</strong> until it ships. Prices are labelled
+<strong>published</strong> (on the vendor&rsquo;s own page),
+<strong>quote-only</strong>, or <strong>market data</strong> (buyer and
+procurement reporting — Vendr, SEC filings, pricing guides), and were
+read in November 2026. Vendors reprice without notice; so do we not —
+$0 has been stable for some time.</p>
+
+<details class="partsec" id="toll"><summary class="partsum"><h3 class="grp">The toll — what one hire actually costs</h3><span class="pcount">18 prices</span></summary>
+<p>Before the feature chart, the money — because the money is the
+complaint. Five facts carry the section. <strong>LinkedIn charges more
+per seat when you add seats</strong> ($170/mo for one Recruiter Lite
+licence; $270/mo each for seats 2&ndash;5, on its own table).
+<strong>Indeed&rsquo;s &ldquo;free&rdquo; posting is a funnel into an
+auction</strong> whose effective price is $15&ndash;$50 per application.
+<strong>ZipRecruiter&rsquo;s own SEC filing prices the average
+toll</strong> at &asymp;$556/mo per paying employer. <strong>Glassdoor
+charges employers to remove competitors&rsquo; ads from their own
+company page.</strong> And <strong>Monster+ Pro&rsquo;s $299/mo is a
+credit pool that burns on both ends</strong> — the same expiring credits
+pay for clicks and for resume views at $2.00 a peek. The full table:</p>
+<div class="cmpwrap"><table class="plaintab">
+<thead><tr><th>Board</th><th>Who pays</th><th>The toll, in numbers</th></tr></thead>
+<tbody>
+<tr><td class="board">Indeed</td><td>Employers</td><td>Sponsored Jobs are a click auction: $0.10&ndash;$5.00+ per click, a buyer-reported enforced floor of &asymp;$25/job/day, and an effective <strong>$15&ndash;$50 per application</strong> (market data). Free posts exist — free organic visibility was gutted on 2026-03-31. Typical employer spend $150&ndash;$1,200/mo; staffing agencies $5,000+/mo.</td></tr>
+<tr><td class="board">LinkedIn</td><td>Employers &amp; recruiters, per seat</td><td>Recruiter Lite&rsquo;s only published price is <strong>$170/mo for one seat</strong> — and seats 2&ndash;5 are listed at <strong>$270/mo <em>each</em></strong>: adding a colleague raises the per-seat price ~59%. Recruiter Corporate is quote-only; buyers report <strong>$8,000&ndash;$12,960 per seat per year</strong> (market data), so a ten-seat team runs &asymp;$100,000/yr. Seat-sharing is prohibited.</td></tr>
+<tr><td class="board">ZipRecruiter</td><td>Employers, per job slot</td><td>No published rate card at all — every account is quoted individually. Reported: $299&ndash;$999 per slot per month (market data). Its own SEC filing does the honest arithmetic: $118.1M from 70,721 paid employers in Q2 2026 &asymp; <strong>$556/mo per paying employer</strong>.</td></tr>
+<tr><td class="board">Glassdoor</td><td>Employers — for branding</td><td>Sells no postings at all: jobs are bought on Indeed and appear here; Glassdoor LLC merged into Indeed, Inc. on 2026-07-01. What is sold is branding, quote-only — median contract <strong>$17,199/yr</strong> (market data). On the free profile, competitors&rsquo; jobs can run on <em>your own company page</em>; removing them is a paid feature.</td></tr>
+<tr><td class="board">Monster</td><td>Employers</td><td>One of the few published rate cards: $8/day pay-as-you-go, or <strong>Monster+ Pro at $299/mo</strong> — a pool of 299 credits that expire monthly and pay for job clicks <em>and</em> resume views, at <strong>$2.00 per resume view</strong>.</td></tr>
+<tr><td class="board">CareerBuilder</td><td>Employers</td><td>The same Monster+ product and the same $299/mo credit pool behind a second storefront — the employer site redirects to Monster. The brand was sold out of Chapter 11 to BOLD on 2025-08-01.</td></tr>
+<tr><td class="board">SimplyHired</td><td>Employers, via Indeed</td><td>Posting here <em>is</em> posting on Indeed: same account, same dashboard, same PPC auction. Directory descriptions still carry its older toll — ~$9&ndash;$13 to reveal one candidate&rsquo;s contact details, no refunds on non-response.</td></tr>
+<tr><td class="board">Dice</td><td>Employers</td><td>Published: <strong>$399 for a single 30-day slot</strong>; Starter $549/mo billed annually (3 slots, 250 candidate views/mo); Standard $749/mo billed annually (5 slots, 500 views/mo). The toll, at least, is printed.</td></tr>
+<tr><td class="board">Wellfound</td><td>Employers — upsells only</td><td>The honest exception in this landscape: <strong>job posts are free and unlimited</strong>, with a built-in ATS. The money is in the upsells — Job Ads from $200/ad; Reach sourcing seats $135&ndash;$199/seat/mo; Autopilot $500/mo per role + 10% of salary on hire (published). This page concedes it plainly.</td></tr>
+<tr><td class="board">Snagajob</td><td>Employers</td><td>Free basic listings exist but sink fast; sponsorship is pay-per-apply-click at market rates with per-job budgets and monthly caps. A figure of ~$89/post/mo circulates in directories, but Snagajob publishes no rate card — treat it as market data, possibly stale.</td></tr>
+<tr><td class="board">Handshake</td><td>Employers</td><td>Basic is free (unlimited posts, 10 messages/mo); promoted jobs from $34/day (published); Pro $450/mo. The real program tier — Enterprise / Talent Engagement Suite — is quote-only, with a market-data median of <strong>$29,835/yr</strong>. The free campus board&rsquo;s serious tier costs a school-district-sized line item.</td></tr>
+<tr><td class="board">USAJobs</td><td>Nobody</td><td><strong>$0 to post, $0 to apply.</strong> No paid placement, no promoted tier, no resume-view credits — every applicant sees the same announcements. A national board run as public infrastructure: proof the toll is a business model, not a law of nature.</td></tr>
+<tr><td class="board">Google for Jobs</td><td>Nobody</td><td>There is <strong>no paid placement at any price</strong>. Inclusion costs correct <span translate="no">JobPosting</span> structured data on an employer&rsquo;s own careers pages. Not a rival — a channel, and the one IDenty Pro&rsquo;s public postings are built to feed.</td></tr>
+<tr><td class="board">FlexJobs</td><td>Both sides</td><td>The landscape&rsquo;s clearest double-dip. <strong>Candidates pay $23.95 every 4 weeks</strong> — 13 bills a year, &asymp;$311/yr — just to see who is hiring; employer names are locked until seekers pay. Employers pay too: ~$399/mo reported (market data).</td></tr>
+<tr><td class="board">We Work Remotely</td><td>Employers</td><td>A flat <strong>~$299 per post</strong> for 30 days (published). No subscription, no database toll — a bulletin board with a cover charge, and the model closest to honest in the commercial set.</td></tr>
+<tr><td class="board">Built In</td><td>Employers</td><td>The product is an annual employer-branding &ldquo;partnership&rdquo;: quote-only, with market-data contracts of $15,000&ndash;$150,000+ and a median of &asymp;<strong>$15,847/yr</strong>. Basic posting rides along; the branding is what&rsquo;s bought.</td></tr>
+<tr><td class="board">Idealist</td><td>Organizations</td><td>Published, and modest by this table&rsquo;s standards: <strong>$145 per job listing</strong> (30 days) for US nonprofits and government agencies — Idealist&rsquo;s own page values one job-posting credit at $145; $195 for businesses, $25 for internships, volunteer roles free. Verified against Idealist&rsquo;s live pricing page on 2026-11-27. Still a per-post toll — the commercial market&rsquo;s floor is a floor with a price on it.</td></tr>
+<tr class="hl"><td class="board">IDenty Pro</td><td>Nobody</td><td><strong>$0 to post. $0 to apply. $0 per view, per click, per seat</strong> — there are no seats. The institution runs its own instance and publishes on its own board; the application lands in the same record that runs the employment. Federation (§88) will move postings between instances at the same price: nothing.</td></tr>
+</tbody></table></div>
+</details>
+
+<details class="partsec" id="sellers"><summary class="partsum"><h3 class="grp">Seventeen names, eight sellers</h3><span class="pcount">8 owners</span></summary>
+<p>Consolidation is a finding, not a footnote. An employer who
+&ldquo;shops around&rdquo; among the big boards is mostly comparing
+storefronts on the same few companies — and paying whichever one owns
+the door they walked through.</p>
+<div class="cmpwrap"><table class="plaintab">
+<thead><tr><th>Seller</th><th>Brands on this page</th><th>What that means</th></tr></thead>
+<tbody>
+<tr><td class="board">Recruit Holdings (Japan)</td><td>Indeed &middot; Glassdoor &middot; SimplyHired</td><td>Three of the ten names that started this page are one company. Glassdoor merged into Indeed, Inc. on 2026-07-01; SimplyHired posts through an Indeed account, into Indeed&rsquo;s dashboard.</td></tr>
+<tr><td class="board">Microsoft</td><td>LinkedIn</td><td>The professional graph is the product; the job board is its rental counter.</td></tr>
+<tr><td class="board">BOLD</td><td>Monster &middot; CareerBuilder &middot; FlexJobs</td><td>Monster+ is one product with two storefronts, bought out of Chapter 11 in 2025 — and the same owner runs the board that charges job seekers too.</td></tr>
+<tr><td class="board">JobGet</td><td>Snagajob</td><td>The hourly board, acquired 2024-11-15 into an app-first hourly network.</td></tr>
+<tr><td class="board">DHI Group</td><td>Dice</td><td>The tech-vertical specialist.</td></tr>
+<tr><td class="board">Independent companies</td><td>ZipRecruiter &middot; Wellfound &middot; Handshake</td><td>Three genuinely separate sellers — the exception, not the rule.</td></tr>
+<tr><td class="board">Action Without Borders (nonprofit)</td><td>Idealist</td><td>The mission-sector board.</td></tr>
+<tr><td class="board">Not sellers at all</td><td>USAJobs (US OPM) &middot; Google for Jobs</td><td>Public infrastructure and a free search surface — the two columns in the chart that charge nobody anything, included here so the map is honest.</td></tr>
+</tbody></table></div>
+<p>The ten names in the original charge — LinkedIn, ZipRecruiter,
+Glassdoor, Monster, CareerBuilder, SimplyHired, Dice, Wellfound,
+Snagajob, Handshake — are about <strong>six independent sellers</strong>
+in 2026. The choice employers think they have is largely the same toll
+booth wearing different paint. A federation of independent instances
+has the opposite shape on purpose: many owners, no seller.</p>
+</details>
+<p class="cmptools"><button type="button" id="cmpOpen">Expand all sections</button> <button type="button" id="cmpClose">Collapse all</button></p>
+
+<details class="partsec" id="chart"><summary class="partsum"><h3 class="grp">The chart — 21 capabilities, 17 boards</h3><span class="pcount">21 functions</span></summary>
+<p>IDenty Pro today, across all 21 rows: <strong>5 Yes &middot; 11 Partial &middot; 5 No</strong> — 3 of the No grades are §88 capabilities, labelled PLANNED in their cells rather than hidden; one is a deliberate absence (a public review corpus); and one is the row where No is the whole point (whether candidates pay).</p>
+<p>The last two groups are the point of the page. Every incumbent&rsquo;s
+&ldquo;distribution&rdquo; is one seller&rsquo;s partner web, run under
+the seller&rsquo;s rules; the federation row asks whether independent
+employers can repost <em>each other&rsquo;s</em> jobs directly, and the
+policy row asks whose rules govern what lands on a board. On those two
+rows the entire commercial market grades No or platform-Partial — and
+IDenty Pro grades No too, today, with the mechanism that closes them
+specced as §88 and labelled planned in the cells, not graded in.</p>
+<details class="grpsec"><summary class="grpsum"><h3 class="grp">Posting &amp; distribution</h3><span class="pcount">3 functions</span></summary>
+<div class="cmpwrap"><table class="compare jobs">
+<thead><tr><th>Feature</th><th>IDenty Pro</th><th class="mk">Indeed</th><th class="mk">LinkedIn</th><th class="mk">ZipRecruiter</th><th class="mk">Glassdoor</th><th class="mk">Monster</th><th class="mk">CareerBuilder</th><th class="mk">SimplyHired</th><th class="mk">Dice</th><th class="mk">Wellfound</th><th class="mk">Snagajob</th><th class="mk">Handshake</th><th class="mk">USAJobs</th><th class="mk">Google for Jobs</th><th class="mk">FlexJobs</th><th class="mk">We Work Remotely</th><th class="mk">Built In</th><th class="mk">Idealist</th></tr></thead><tbody>
+<tr><td class="feat">Post a job at $0</td><td class="idc"><strong>Yes</strong> — posting is the last step of a requisition (§47): final approval posts the job to the institution&rsquo;s own public board. Price: $0, forever.</td><td class="mk">Partial<sup>1</sup></td><td class="mk">Partial<sup>2</sup></td><td class="mk">—</td><td class="mk">—<sup>3</sup></td><td class="mk">Partial<sup>4</sup></td><td class="mk">Partial<sup>4</sup></td><td class="mk">Partial<sup>1</sup></td><td class="mk">—</td><td class="mk">✓</td><td class="mk">Partial</td><td class="mk">✓</td><td class="mk">✓</td><td class="mk">✓<sup>5</sup></td><td class="mk">—</td><td class="mk">—</td><td class="mk">Partial</td><td class="mk">—</td></tr>
+<tr><td class="feat">Distribution / syndication beyond its own site</td><td class="idc"><strong>No</strong> — PLANNED (§88): peer-to-peer reposting between independent instances, and Google for Jobs structured-data emission, are specced — not yet built. Today a posting lives on its own institution&rsquo;s board.</td><td class="mk">Partial</td><td class="mk">—</td><td class="mk">✓</td><td class="mk">Partial<sup>3</sup></td><td class="mk">✓</td><td class="mk">✓</td><td class="mk">✓</td><td class="mk">—</td><td class="mk">—</td><td class="mk">Partial</td><td class="mk">Partial</td><td class="mk">—</td><td class="mk">✓<sup>5</sup></td><td class="mk">—</td><td class="mk">—</td><td class="mk">Partial</td><td class="mk">—</td></tr>
+<tr><td class="feat">Public careers page per employer</td><td class="idc"><strong>Yes</strong> — every institution has a public job board today; §88 (planned) adds the structured careers face — categories, stated comp, distance filters — to it.</td><td class="mk">✓</td><td class="mk">✓</td><td class="mk">Partial</td><td class="mk">✓</td><td class="mk">Partial</td><td class="mk">Partial</td><td class="mk">—</td><td class="mk">Partial</td><td class="mk">✓</td><td class="mk">Partial</td><td class="mk">✓</td><td class="mk">Partial</td><td class="mk">n/a<sup>5</sup></td><td class="mk">Partial</td><td class="mk">—</td><td class="mk">✓</td><td class="mk">Partial</td></tr>
+</tbody></table></div>
+</details>
+<details class="grpsec"><summary class="grpsum"><h3 class="grp">The candidate&rsquo;s side</h3><span class="pcount">6 functions</span></summary>
+<div class="cmpwrap"><table class="compare jobs">
+<thead><tr><th>Feature</th><th>IDenty Pro</th><th class="mk">Indeed</th><th class="mk">LinkedIn</th><th class="mk">ZipRecruiter</th><th class="mk">Glassdoor</th><th class="mk">Monster</th><th class="mk">CareerBuilder</th><th class="mk">SimplyHired</th><th class="mk">Dice</th><th class="mk">Wellfound</th><th class="mk">Snagajob</th><th class="mk">Handshake</th><th class="mk">USAJobs</th><th class="mk">Google for Jobs</th><th class="mk">FlexJobs</th><th class="mk">We Work Remotely</th><th class="mk">Built In</th><th class="mk">Idealist</th></tr></thead><tbody>
+<tr><td class="feat">One-record application — no re-typing, no new account per employer</td><td class="idc"><strong>Yes</strong> — Apply means pointing your lifelong Person record at an institution: no new account, no re-typed resume.</td><td class="mk">Partial</td><td class="mk">Partial</td><td class="mk">Partial</td><td class="mk">—</td><td class="mk">Partial</td><td class="mk">Partial</td><td class="mk">Partial</td><td class="mk">Partial</td><td class="mk">Partial</td><td class="mk">Partial</td><td class="mk">Partial</td><td class="mk">Partial</td><td class="mk">—</td><td class="mk">—</td><td class="mk">—</td><td class="mk">Partial</td><td class="mk">—</td></tr>
+<tr><td class="feat">Job alerts &amp; matching for seekers</td><td class="idc"><strong>Partial</strong> — internal alert rules are shipped; a seeker-facing alerts product for external candidates is not built.<sup>8</sup></td><td class="mk">✓</td><td class="mk">✓</td><td class="mk">✓</td><td class="mk">✓</td><td class="mk">✓</td><td class="mk">✓</td><td class="mk">✓</td><td class="mk">✓</td><td class="mk">✓</td><td class="mk">✓</td><td class="mk">✓</td><td class="mk">✓</td><td class="mk">Partial</td><td class="mk">✓</td><td class="mk">Partial</td><td class="mk">✓</td><td class="mk">✓</td></tr>
+<tr><td class="feat">Salary data on listings / market salary data</td><td class="idc"><strong>Partial</strong> — real pay bands on its own requisitions, employer-stated (§47); no market-wide salary corpus.<sup>9</sup></td><td class="mk">✓</td><td class="mk">✓</td><td class="mk">✓</td><td class="mk">✓</td><td class="mk">Partial</td><td class="mk">Partial</td><td class="mk">✓</td><td class="mk">✓</td><td class="mk">✓</td><td class="mk">Partial</td><td class="mk">Partial</td><td class="mk">✓</td><td class="mk">Partial</td><td class="mk">Partial</td><td class="mk">Partial</td><td class="mk">Partial</td><td class="mk">Partial</td></tr>
+<tr><td class="feat">Public company reviews</td><td class="idc"><strong>No</strong> — no public review corpus. Reputation data (360&deg; feedback §64, shout-outs §69) belongs to the person and the institution — it is never rented back to either.</td><td class="mk">Partial</td><td class="mk">Partial</td><td class="mk">—</td><td class="mk">✓</td><td class="mk">—</td><td class="mk">—</td><td class="mk">—</td><td class="mk">—</td><td class="mk">—</td><td class="mk">—</td><td class="mk">—</td><td class="mk">—</td><td class="mk">—</td><td class="mk">—</td><td class="mk">—</td><td class="mk">Partial</td><td class="mk">—</td></tr>
+<tr><td class="feat">Professional networking</td><td class="idc"><strong>Partial</strong> — the §69 intranet is a real network <em>inside</em> an institution; there is no cross-institution public graph.<sup>10</sup></td><td class="mk">Partial</td><td class="mk">✓</td><td class="mk">—</td><td class="mk">Partial</td><td class="mk">—</td><td class="mk">—</td><td class="mk">—</td><td class="mk">—</td><td class="mk">Partial</td><td class="mk">—</td><td class="mk">Partial</td><td class="mk">—</td><td class="mk">—</td><td class="mk">—</td><td class="mk">—</td><td class="mk">Partial</td><td class="mk">Partial</td></tr>
+<tr><td class="feat">Candidate pays to see or apply</td><td class="idc"><strong>No</strong> — candidates never pay to see or apply. No seeker paywall, no premium tier, no account wall in front of a listing.</td><td class="mk">—</td><td class="mk">Partial<sup>19</sup></td><td class="mk">—</td><td class="mk">Partial<sup>20</sup></td><td class="mk">—</td><td class="mk">—</td><td class="mk">—</td><td class="mk">—</td><td class="mk">—</td><td class="mk">—</td><td class="mk">—</td><td class="mk">—</td><td class="mk">—</td><td class="mk">✓</td><td class="mk">—</td><td class="mk">—</td><td class="mk">—</td></tr>
+</tbody></table></div>
+</details>
+<details class="grpsec"><summary class="grpsum"><h3 class="grp">The employer&rsquo;s machinery</h3><span class="pcount">5 functions</span></summary>
+<div class="cmpwrap"><table class="compare jobs">
+<thead><tr><th>Feature</th><th>IDenty Pro</th><th class="mk">Indeed</th><th class="mk">LinkedIn</th><th class="mk">ZipRecruiter</th><th class="mk">Glassdoor</th><th class="mk">Monster</th><th class="mk">CareerBuilder</th><th class="mk">SimplyHired</th><th class="mk">Dice</th><th class="mk">Wellfound</th><th class="mk">Snagajob</th><th class="mk">Handshake</th><th class="mk">USAJobs</th><th class="mk">Google for Jobs</th><th class="mk">FlexJobs</th><th class="mk">We Work Remotely</th><th class="mk">Built In</th><th class="mk">Idealist</th></tr></thead><tbody>
+<tr><td class="feat">Employer searches a candidate database</td><td class="idc"><strong>Partial</strong> — an institution searches its own applicant and alumni pools (shipped); there is no public candidate marketplace — by design.<sup>6</sup></td><td class="mk">Add-on</td><td class="mk">Add-on</td><td class="mk">Add-on</td><td class="mk">—</td><td class="mk">Add-on</td><td class="mk">Add-on</td><td class="mk">Partial</td><td class="mk">Add-on</td><td class="mk">Add-on</td><td class="mk">Partial</td><td class="mk">Add-on</td><td class="mk">—</td><td class="mk">—</td><td class="mk">Add-on</td><td class="mk">—</td><td class="mk">Partial</td><td class="mk">—</td></tr>
+<tr><td class="feat">Recruiter messaging / outreach</td><td class="idc"><strong>Partial</strong> — full messaging inside its own hiring pipeline (§40); no cold outreach to strangers — by design.<sup>7</sup></td><td class="mk">Add-on</td><td class="mk">Add-on</td><td class="mk">Add-on</td><td class="mk">—</td><td class="mk">Add-on</td><td class="mk">Add-on</td><td class="mk">—</td><td class="mk">Add-on</td><td class="mk">Add-on</td><td class="mk">Partial</td><td class="mk">Add-on</td><td class="mk">—</td><td class="mk">—</td><td class="mk">—</td><td class="mk">—</td><td class="mk">Partial</td><td class="mk">—</td></tr>
+<tr><td class="feat">Employer branding pages</td><td class="idc"><strong>Partial</strong> — the institution&rsquo;s identity lives on its own board and intranet (§69); there is no branding tier, because there is nothing to upsell.</td><td class="mk">Add-on</td><td class="mk">✓</td><td class="mk">Partial</td><td class="mk">Add-on</td><td class="mk">Partial</td><td class="mk">Partial</td><td class="mk">—</td><td class="mk">Partial</td><td class="mk">✓</td><td class="mk">Partial</td><td class="mk">Partial</td><td class="mk">—</td><td class="mk">—</td><td class="mk">Partial</td><td class="mk">—</td><td class="mk">✓</td><td class="mk">Partial</td></tr>
+<tr><td class="feat">Built-in ATS — pipeline, offers, onboarding handoff</td><td class="idc"><strong>Yes</strong> — the five-stage Hiring Board (Applied &rarr; Screened &rarr; Pending &rarr; Hired &rarr; Alumni/Retirees, §§68&ndash;70), Offer Packets (§53), and onboarding in the same system.</td><td class="mk">Partial</td><td class="mk">Partial</td><td class="mk">Partial</td><td class="mk">—</td><td class="mk">Partial</td><td class="mk">Partial</td><td class="mk">—</td><td class="mk">Partial</td><td class="mk">✓</td><td class="mk">Partial</td><td class="mk">Partial</td><td class="mk">Partial</td><td class="mk">—</td><td class="mk">—</td><td class="mk">—</td><td class="mk">Partial</td><td class="mk">—</td></tr>
+<tr><td class="feat">Application becomes the employment record — no re-keying into HR</td><td class="idc"><strong>Yes</strong> — the application is born in the same record that runs onboarding, I-9 / E-Verify (§63), payroll and the whole employment. No export, no re-keying, no second system.</td><td class="mk">—</td><td class="mk">—</td><td class="mk">Partial<sup>21</sup></td><td class="mk">—</td><td class="mk">Partial<sup>21</sup></td><td class="mk">Partial<sup>21</sup></td><td class="mk">—</td><td class="mk">Partial<sup>21</sup></td><td class="mk">Partial</td><td class="mk">—</td><td class="mk">Partial<sup>21</sup></td><td class="mk">Partial<sup>21</sup></td><td class="mk">—</td><td class="mk">—</td><td class="mk">—</td><td class="mk">Partial<sup>21</sup></td><td class="mk">—</td></tr>
+</tbody></table></div>
+</details>
+<details class="grpsec"><summary class="grpsum"><h3 class="grp">The niches</h3><span class="pcount">5 functions</span></summary>
+<div class="cmpwrap"><table class="compare jobs">
+<thead><tr><th>Feature</th><th>IDenty Pro</th><th class="mk">Indeed</th><th class="mk">LinkedIn</th><th class="mk">ZipRecruiter</th><th class="mk">Glassdoor</th><th class="mk">Monster</th><th class="mk">CareerBuilder</th><th class="mk">SimplyHired</th><th class="mk">Dice</th><th class="mk">Wellfound</th><th class="mk">Snagajob</th><th class="mk">Handshake</th><th class="mk">USAJobs</th><th class="mk">Google for Jobs</th><th class="mk">FlexJobs</th><th class="mk">We Work Remotely</th><th class="mk">Built In</th><th class="mk">Idealist</th></tr></thead><tbody>
+<tr><td class="feat">Hourly / shift-work strength</td><td class="idc"><strong>Partial</strong> — hourly machinery is deep (time &amp; attendance, §87 event check-in); an hourly job <em>marketplace</em> is not a product yet.<sup>11</sup></td><td class="mk">✓</td><td class="mk">Partial</td><td class="mk">✓</td><td class="mk">Partial</td><td class="mk">Partial</td><td class="mk">Partial</td><td class="mk">Partial</td><td class="mk">—</td><td class="mk">—</td><td class="mk">✓</td><td class="mk">Partial</td><td class="mk">Partial</td><td class="mk">Partial</td><td class="mk">Partial</td><td class="mk">—</td><td class="mk">—</td><td class="mk">Partial</td></tr>
+<tr><td class="feat">Early-career / campus strength</td><td class="idc"><strong>Partial</strong> — the education pipeline (K-12 &rarr; undergrad &rarr; GME) lives in the same record; a campus recruiting network is not built.<sup>12</sup></td><td class="mk">Partial</td><td class="mk">Partial</td><td class="mk">Partial</td><td class="mk">Partial</td><td class="mk">Partial</td><td class="mk">Partial</td><td class="mk">Partial</td><td class="mk">Partial</td><td class="mk">Partial</td><td class="mk">Partial</td><td class="mk">✓</td><td class="mk">Partial</td><td class="mk">Partial</td><td class="mk">—</td><td class="mk">Partial</td><td class="mk">Partial</td><td class="mk">Partial</td></tr>
+<tr><td class="feat">Tech-role strength</td><td class="idc"><strong>Partial</strong> — any institution can post tech roles on its own board today; there is no tech-vertical pool.</td><td class="mk">Partial</td><td class="mk">✓</td><td class="mk">Partial</td><td class="mk">Partial</td><td class="mk">Partial</td><td class="mk">Partial</td><td class="mk">Partial</td><td class="mk">✓</td><td class="mk">✓</td><td class="mk">—</td><td class="mk">Partial</td><td class="mk">Partial</td><td class="mk">Partial</td><td class="mk">Partial</td><td class="mk">✓</td><td class="mk">✓</td><td class="mk">—</td></tr>
+<tr><td class="feat">Startup strength</td><td class="idc"><strong>Partial</strong> — postings are sector-agnostic; there is no startup pool.</td><td class="mk">Partial</td><td class="mk">Partial</td><td class="mk">Partial</td><td class="mk">—</td><td class="mk">—</td><td class="mk">—</td><td class="mk">—</td><td class="mk">Partial</td><td class="mk">✓</td><td class="mk">—</td><td class="mk">Partial</td><td class="mk">—</td><td class="mk">Partial</td><td class="mk">Partial</td><td class="mk">✓</td><td class="mk">✓</td><td class="mk">—</td></tr>
+<tr><td class="feat">Public-sector / nonprofit strength</td><td class="idc"><strong>Partial</strong> — schools, hospitals and nonprofits are first-class institutions in the product; sector job networks are not built.<sup>13</sup></td><td class="mk">Partial</td><td class="mk">Partial</td><td class="mk">Partial</td><td class="mk">—</td><td class="mk">Partial</td><td class="mk">Partial</td><td class="mk">Partial</td><td class="mk">—</td><td class="mk">—</td><td class="mk">—</td><td class="mk">Partial</td><td class="mk">✓</td><td class="mk">Partial</td><td class="mk">—</td><td class="mk">—</td><td class="mk">—</td><td class="mk">✓</td></tr>
+</tbody></table></div>
+</details>
+<details class="grpsec"><summary class="grpsum"><h3 class="grp">Federation &amp; policy — the rows nobody else has</h3><span class="pcount">2 functions</span></summary>
+<div class="cmpwrap"><table class="compare jobs">
+<thead><tr><th>Feature</th><th>IDenty Pro</th><th class="mk">Indeed</th><th class="mk">LinkedIn</th><th class="mk">ZipRecruiter</th><th class="mk">Glassdoor</th><th class="mk">Monster</th><th class="mk">CareerBuilder</th><th class="mk">SimplyHired</th><th class="mk">Dice</th><th class="mk">Wellfound</th><th class="mk">Snagajob</th><th class="mk">Handshake</th><th class="mk">USAJobs</th><th class="mk">Google for Jobs</th><th class="mk">FlexJobs</th><th class="mk">We Work Remotely</th><th class="mk">Built In</th><th class="mk">Idealist</th></tr></thead><tbody>
+<tr><td class="feat">Federation — independent employers repost each other&rsquo;s jobs</td><td class="idc"><strong>No</strong> — PLANNED (§88): signed postings, reposted peer-to-peer between paired instances. Specced 2026-11-27; not yet built. No column on this page offers it at all.</td><td class="mk">—</td><td class="mk">—</td><td class="mk">Partial<sup>14</sup></td><td class="mk">—</td><td class="mk">Partial<sup>14</sup></td><td class="mk">Partial<sup>14</sup></td><td class="mk">Partial<sup>14</sup></td><td class="mk">—</td><td class="mk">—</td><td class="mk">—</td><td class="mk">—</td><td class="mk">—</td><td class="mk">Partial<sup>5</sup></td><td class="mk">—</td><td class="mk">—</td><td class="mk">—</td><td class="mk">—</td></tr>
+<tr><td class="feat">Posting policy controls — category, pay-type and distance rules on what may be reposted</td><td class="idc"><strong>No</strong> — PLANNED (§88): the admin policy engine. Every Partial in this row is a platform curating for itself; not one is an employer enforcing its own rules on jobs it accepts from peers.</td><td class="mk">Partial<sup>15</sup></td><td class="mk">Partial<sup>15</sup></td><td class="mk">Partial<sup>15</sup></td><td class="mk">—</td><td class="mk">Partial<sup>15</sup></td><td class="mk">Partial<sup>15</sup></td><td class="mk">Partial<sup>15</sup></td><td class="mk">Partial<sup>15</sup></td><td class="mk">Partial<sup>16</sup></td><td class="mk">Partial<sup>15</sup></td><td class="mk">Partial<sup>17</sup></td><td class="mk">✓<sup>18</sup></td><td class="mk">—</td><td class="mk">Partial<sup>16</sup></td><td class="mk">Partial<sup>15</sup></td><td class="mk">Partial<sup>15</sup></td><td class="mk">Partial<sup>15</sup></td></tr>
+</tbody></table></div>
+</details>
+<ol class="notes">
+<li>Free posts exist but organic visibility was gutted 2026-03-31; the visible product is the PPC auction.</li>
+<li>One free post; visibility is PPC.</li>
+<li>Glassdoor sells no postings; jobs arrive via Indeed.</li>
+<li>A free post exists on Monster+ (1 per 30 days, applicant-capped per plan pages); the promoted product is the $8/day PPC.</li>
+<li>Google for Jobs is a surface, not a seller: &ldquo;Yes&rdquo; means free inclusion/distribution, not a posting product.</li>
+<li>IDenty: an institution searches <em>its own</em> applicant + alumni pools (real, shipped); there is no public candidate marketplace — by design (see the concessions).</li>
+<li>IDenty: full messaging inside its own hiring pipeline (§40 comms); no cold outreach to strangers — by design.</li>
+<li>IDenty: internal alert rules shipped; a seeker-facing alert product for external candidates is not built.</li>
+<li>IDenty: real pay bands on its own requisitions (employer-stated, not estimated); no market-wide salary corpus.</li>
+<li>IDenty: the §69 intranet is a real network <em>inside</em> an institution; there is no cross-institution public graph.</li>
+<li>IDenty: hourly workforce machinery (time &amp; attendance, §87 check-in) is deep; an hourly <em>job marketplace</em> is not a product yet.</li>
+<li>IDenty: the education pipeline (K-12, undergrad, GME) lives in the same record; a campus recruiting network is not built.</li>
+<li>IDenty: schools, hospitals and nonprofits are first-class institutions in the product; sector job networks are not built.</li>
+<li>Syndication networks repost within one seller&rsquo;s partner web, under the seller&rsquo;s rules — not peer-to-peer between independent systems, and never under the <em>employer&rsquo;s</em> policy.</li>
+<li>Platform content policies exist (the platform decides what may run, for the platform&rsquo;s reasons).</li>
+<li>FlexJobs / Wellfound screen categories (no commission-only / MLM at FlexJobs; salary-required at Wellfound) — platform-side curation, not an employer-set rulebook.</li>
+<li>Handshake school approvals gate postings per campus.</li>
+<li>USAJobs: statutory eligibility / hiring-path rules — the strictest policy engine in the table, and it belongs to the public.</li>
+<li>LinkedIn Premium upsell gates seeker features (InMail, insights).</li>
+<li>Glassdoor requires an account to read the reviews workers wrote for free.</li>
+<li>Via integration with / export to a separate ATS the employer also pays for.</li>
+</ol>
+</details>
+
+<details class="partsec" id="concessions"><summary class="partsum"><h3 class="grp">The honest concessions</h3><span class="pcount">6 of them</span></summary>
+<p>This page&rsquo;s credibility is its only asset, so the moats get
+printed at the same size as the tolls.</p>
+
+<h3>1. LinkedIn&rsquo;s graph is a real moat</h3>
+<p>A billion-member professional graph, twenty years deep, cannot be
+declared into existence. IDenty&rsquo;s answer is different in kind, not
+degree: the lifelong Person record means an institution&rsquo;s graph
+is <em>grown, not rented</em> — every applicant, employee, student,
+patient and alumnus the institution has ever legitimately touched is
+already a node, with provenance. The chart grades networking Partial,
+and here is the sentence in full size: <strong>we will never have
+LinkedIn&rsquo;s graph; we make yours unnecessary to rent for the
+people you actually hire.</strong></p>
+
+<h3>2. Indeed&rsquo;s traffic is a real moat</h3>
+<p>No federation of independent instances launches with Indeed&rsquo;s
+seeker volume. IDenty&rsquo;s answers: (a) <strong>Google for
+Jobs</strong> — free, structured-data distribution off the
+institution&rsquo;s own board, the one top-of-funnel that cannot be
+toll-gated; (b) federation reach grows with instances, and the honest
+early claim is <em>your region, your sector, your alumni</em> — not
+&ldquo;everyone.&rdquo; Seeker-traffic rows stay Partial.</p>
+
+<h3>3. Glassdoor&rsquo;s review corpus is a real moat — and a hostage situation</h3>
+<p>The reviews are valuable <em>and</em> the reviewed employer pays to
+remove competitors&rsquo; ads from its own page. IDenty has no public
+review corpus and grades <strong>No</strong> — while noting its answer
+is structural: inside IDenty, reputation data (360&deg; feedback §64,
+shout-outs §69) belongs to the institution and the person, not to a
+third party renting it back. A public, person-controlled review layer
+is a possible future item; it is not shipped and is not graded as
+planned here.</p>
+
+<h3>4. Handshake&rsquo;s school network is a real moat</h3>
+<p>1,400+ institutional partnerships is a genuine network. IDenty&rsquo;s
+counter is that its institutions <em>are</em> schools: a district or
+university running IDenty already holds its own students&rsquo; records
+from kindergarten to retirement, so its &ldquo;campus network&rdquo; is
+its own enrollment, not a rented channel. Grade: Partial; the
+cross-institution campus reach is federation-dependent.</p>
+
+<h3>5. What IDenty genuinely wins today, no asterisk</h3>
+<p>The toll rows ($0 posting, $0 candidate side, no per-view credits, no
+seat licences), the application-becomes-the-record row — no board can
+match it, because their product <em>ends</em> at the application — the
+built-in ATS row, and, once §88 ships, the federation and
+employer-policy rows, which <strong>no column in this table offers at
+all</strong>: every Partial there is a platform curating for itself,
+never an employer enforcing its own rules (no commission-only, no
+categories it won&rsquo;t carry, nothing beyond its chosen radius) on
+jobs it accepts from peers.</p>
+
+<h3>6. The federation&rsquo;s cold start is the honest risk</h3>
+<p>A peer-to-peer board is worth little with two instances and a great
+deal with two hundred. The mechanism ships complete and the network is
+the work — the same sentence every honest network product owes its
+readers, and the one none of the incumbents ever had to print, because
+they bought their networks with the tolls documented above.</p>
+</details>
+
+<details class="partsec" id="federation"><summary class="partsum"><h3 class="grp">How the federation works — §88</h3><span class="pcount">specced, not yet built</span></summary>
+<div class="callout"><strong>Status: specified, not yet built.</strong>
+§88&rsquo;s specification (<em>SPEC-JOBS-FEDERATION</em>) is written —
+the mechanism below is settled, with 14 E2E acceptance criteria — and
+its build is queued in the benchmark loop behind the current lane.
+Nothing in this section is graded as shipped anywhere on this page;
+the chart above marks both §88 rows <strong>No</strong> until the
+build lands and passes its audits.</div>
+
+<h3>No platform in the middle</h3>
+<p>An institution publishes its own jobs on its own careers page — the
+posting is a structured document (category, compensation structure,
+work mode, postal code: data, not prose) signed with the
+institution&rsquo;s own Ed25519 key, the same machinery that signs
+facts on the record. Instances then share those documents
+<em>directly</em>. There is no registry, no central directory, no
+relay — and therefore nothing in the middle that can charge rent,
+run an auction, or hold an application hostage. Funding for the whole
+mechanism: <strong>$0 to start, $0 monthly, $0 annual</strong> —
+transport is HTTPS between instances that already serve it, and the
+ZIP-code centroids come from the U.S. Census Bureau&rsquo;s public-domain
+Gazetteer files. The one thing that could ever cost money — paying for
+reach — is refused on principle: the design contains no sponsored slot
+and no place to put one.</p>
+
+<h3>Pairing — deliberate, mutual, revocable</h3>
+<p>Two instances connect the way two institutions do: on purpose. An
+admin creates a one-time invitation (72-hour life, shown as text and a
+QR); the other admin presents it, and both sides approve — with both
+instances&rsquo; key fingerprints displayed for comparison over a
+channel the admins already trust. Nothing flows before both approvals
+exist. Either side can unpair at any moment, effective immediately, or
+block a fingerprint outright. No public surface lists an
+instance&rsquo;s peers, and a pairing endpoint probed by a stranger
+answers with silence shaped like a 404. Key rotation means re-pairing:
+trust is never silently inherited.</p>
+
+<h3>The policy engine — the receiving admin&rsquo;s law</h3>
+<p>Origin asserts; receiver disposes. No peer can force a posting onto
+your board, keep it there against your policy, or resurrect it after
+you pull it. The rules are written as plain sentences, never as code
+an admin must learn to read — and the owner&rsquo;s three examples are
+the <strong>Owner&rsquo;s starter policy</strong> preset, verbatim in effect:</p>
+<ul>
+<li><strong>&ldquo;No exotic dancers&rdquo;</strong> — a category rule.
+The category vocabulary names <em>adult entertainment</em> precisely so
+an admin can refuse it; a platform that cannot name a category cannot
+let you block it. In the starter policy this block is
+<strong>hard</strong>: it has no release valve, and the only way past
+it is editing the policy itself, in the open, with the diff logged.</li>
+<li><strong>&ldquo;No commission only&rdquo;</strong> — a
+compensation-structure rule. Every posting must declare its comp
+structure from a closed list (<em>salary, hourly, salary plus
+commission, commission only, stipend, per assignment, unpaid,
+undisclosed</em>) before it can publish or travel. The starter policy
+refuses <em>commission only</em> and <em>undisclosed</em> — &ldquo;no
+comp stated&rdquo; is a refusal too.</li>
+<li><strong>&ldquo;No companies further than 100 miles from our
+corporate home ZIP&rdquo;</strong> — a distance rule: the posting&rsquo;s
+ZIP centroid, measured from the institution&rsquo;s home ZIP centroid,
+must fall within the radius the admin sets. Remote postings are exempt
+by default; hybrid postings are <em>not</em> — a hybrid job 250 miles
+away is a commute lie, and the rule says so.</li>
+</ul>
+<p>Around those: keyword rules (matched on word boundaries, with the
+matched term shown <em>in its sentence</em> — a zoo&rsquo;s
+&ldquo;exotic animal keeper&rdquo; is the standing warning), employer
+deny/allow lists, age caps that kill evergreen zombie reposts, and
+duplicate collapse, so cross-posting the same job through five paired
+instances buys no extra board space. A peer&rsquo;s own narrowing can
+only ever narrow what you accept, never widen it. And the default for
+a fresh institution is <strong>review everything</strong>: every
+incoming posting lands in a queue until the admin writes rules from
+their own decisions. A refusal always names the rule that fired and
+shows its evidence; a soft refusal can be released once, by a named
+admin, with a reason recorded forever. No silent drops, no silent
+publishes.</p>
+
+<h3>A repost is a copy that can die</h3>
+<p>A repost renders from the signed document stored locally — never
+hot-linked, never fetched at display time — and four executioners can
+end it, any one sufficient: a <strong>superseding version</strong>
+arrives (and re-runs policy, so an origin cannot edit its way around a
+block); a <strong>takedown document</strong> arrives (filled, closed,
+or withdrawn at the origin); the signed <strong>expiry passes</strong>
+— death that needs no network at all, so a posting dies on schedule
+even if its origin has been offline for a week; or the
+<strong>receiving admin pulls it</strong>, instantly, for any reason
+or none, and a locally pulled repost stays pulled. The staleness bound
+is printed on the tin: a takedown lands at the earlier of the push
+(attempted within minutes) or the next signed-manifest reconciliation
+— worst case the configured interval, 24 hours by default, settable to
+one. A removed repost&rsquo;s URL serves an honest tombstone —
+<em>&ldquo;This posting was shared from {institution} and is no longer
+available&rdquo;</em> — never a silent 404 and never a still-apply-able
+ghost. Five bad signatures inside an hour auto-pause a pairing and
+alert the admins: a spoofing attempt becomes noise and a phone call,
+not a board full of fake jobs.</p>
+
+<h3>Applications go home</h3>
+<p>A repost is a link, never a form. Applying happens entirely at the
+origin institution, in its own applicant tracking, through one of two
+doors: a record-holder points their lifelong record at the institution
+(the shipped pattern), or a stranger applies on the origin&rsquo;s
+careers page and a Person record is born there — applicant only, with
+a consent fact and provenance, deduplicated by identity (the phone
+number is an identity) rather than by hope. The reposting instance
+serves the link and nothing else: <strong>no applicant data transits a
+reposter — not the application, not a copy, not even a count.</strong>
+Bulletin boards don&rsquo;t take applications; that is the whole
+design. And the public careers page emits schema.org
+<span translate="no">JobPosting</span> structured data alongside the
+HTML, so Google for Jobs carries the posting free — chronological
+order, no ranking knob, because there is no ranking knob to sell.</p>
+</details>
+
+<h2>Sources &amp; method</h2>
+<p>Pricing and product facts were read in November 2026 from the
+vendors&rsquo; own pages (Monster, Handshake, Idealist, SimplyHired
+brand facts, Google&rsquo;s JobPosting structured-data documentation),
+from ZipRecruiter&rsquo;s Q2 2026 Form 10-Q, and from procurement and
+pricing reporting (Vendr; pin.com; enrow.io; noon.ai; avahr.com;
+remoteboard.com; workinsiders.com; latestremote.com; staffedup.com),
+each figure labelled published, quote-only, or market data where it
+appears. The Idealist per-post figure — the weakest-sourced number in
+the underlying research — was verified against Idealist&rsquo;s own
+live pricing page on 2026-11-27 before this page was written. IDenty
+Pro&rsquo;s grades are taken from its shipped feature map; §88&rsquo;s
+mechanism from its written specification. The full 432-feature
+comparison of IDenty Pro against the HR, education and classroom
+platforms lives on the <a href="compare.html">Compare page</a>.</p>
+</article>
+</main>
+<footer class="site">
+  <div class="wrap">
+    <div class="cols">
+      <div>
+        <strong>Vizsla OS</strong><br>
+        Built in Leesburg, Florida, by Richard Garrison<br>
+        and the AI he directs.
+        <p class="contactline">Contact: <a href="mailto:admin@vizslaos.com">admin@vizslaos.com</a><br>
+        <a href="https://instagram.com/richardgarrisonia">Instagram</a> &middot;
+        <a href="https://facebook.com/richard.garrison.731917">Facebook</a> &middot;
+        <a href="https://www.linkedin.com/in/garrisonrichard">LinkedIn</a></p>
+      </div>
+      <div>
+        <a href="why.html">Why Vizsla?</a><br>
+        <a href="story.html">The Story</a><br>
+        <a href="dogs.html">Meet our dogs</a><br>
+        <a href="inside.html">What&rsquo;s inside</a><br>
+        <a href="phone-and-texting.html">Phone &amp; texting</a><br>
+        <a href="tv.html">TV Launcher</a><br>
+        <a href="arcade.html">Vizsla Arcade</a><br>
+        <a href="future.html">Future developments</a><br>
+        <a href="furniture.html">Furniture &amp; appearance</a><br>
+        <a href="hardware.html">Tested hardware</a><br>
+        <a href="app-format.html">How Vizsla apps ship</a><br>
+        <a href="shelf.html">The Shelf</a><br>
+        <a href="install.html">Install &amp; Ferry</a><br>
+        <a href="savings.html">What you stop paying for</a><br>
+        <a href="kindness.html">Kindness &amp; privacy</a><br>
+        <a href="feedback.html">Get involved</a>
+      </div>
+      <div>
+        In active development.<br>
+        No download yet &mdash; honestly.<br>
+        <a href="inside.html#try-profiler">Except System Profiler &mdash; try it today</a>
+      </div>
+    </div>
+    <p class="fineprint">No form, no cookies, no trackers &mdash; and no pretend inbox.
+    The links on this page are plain links, in the open, to places that exist.</p>
+  </div>
+    <p class="disclaimer">Vizsla OS is an independent, open-source project. It has no corporate or organizational sponsors, and it is not endorsed or approved by any company or organization. Product and company names mentioned on this site belong to their owners; using a name here doesn't imply endorsement or approval by — or of — anyone.</p>
+  </footer>
+
+<script>
+(function(){
+  var all=function(){return document.querySelectorAll('details.partsec,details.grpsec')};
+  var set=function(open){all().forEach(function(d){d.open=open})};
+  var o=document.getElementById('cmpOpen'),c=document.getElementById('cmpClose');
+  if(o)o.addEventListener('click',function(){set(true)});
+  if(c)c.addEventListener('click',function(){set(false)});
+  if(location.hash){var t=document.querySelector(location.hash);
+    if(t){var d=t.closest('details');while(d){d.open=true;d=d.parentElement.closest('details')}}}
+  window.addEventListener('beforeprint',function(){set(true)});
+})();
+</script>
+</body>
+</html>
