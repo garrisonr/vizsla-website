@@ -253,9 +253,10 @@
   <tr><td class="feat">Monthly cost at ~10,000 subscribers</td><td class="idc"><strong>$0</strong></td><td class="mk">$110&ndash;135</td><td class="mk">$139</td><td class="mk">$0&ndash;139</td><td class="mk">$79</td><td class="mk">$89&ndash;129</td></tr>
   <tr><td class="feat">What the bill counts</td><td class="idc"><strong>Nothing</strong> &mdash; nobody is billed, so nobody is billed for people who left</td><td class="mk">Stored contacts</td><td class="mk">Subscribers</td><td class="mk">Subscribers</td><td class="mk">Active only</td><td class="mk">Active only</td></tr>
   <tr><td class="feat">Monthly send limit</td><td class="idc"><strong>None in the software</strong> &mdash; your sending provider&rsquo;s caps are the only caps</td><td class="mk">10&ndash;12&times; contacts</td><td class="mk">Unlimited</td><td class="mk">Unlimited</td><td class="mk">&le;1 email/day</td><td class="mk">10&times; (Comfort)</td></tr>
-  <tr><td class="feat">Automation sequences</td><td class="idc"><strong>Missing</strong> &mdash; a single welcome email today; multi-step sequences are the known gap at the top of our list</td><td class="mk">Tier-gated</td><td class="mk">Paid plans</td><td class="mk">&#10003;</td><td class="mk">Add-on</td><td class="mk">&#10003;</td></tr>
-  <tr><td class="feat">Segmentation</td><td class="idc"><strong>Partial</strong> &mdash; tags ride on the contact record today; the rule-based segment builder is a named later phase</td><td class="mk">Standard +</td><td class="mk">&#10003;</td><td class="mk">&#10003;</td><td class="mk">Add-on</td><td class="mk">&#10003;</td></tr>
-  <tr><td class="feat">Templates &amp; editor</td><td class="idc"><strong>Partial</strong> &mdash; Markdown and a small block set; no template library yet</td><td class="mk">&#10003;</td><td class="mk">&#10003;</td><td class="mk">?</td><td class="mk">Markdown-first</td><td class="mk">&#10003;</td></tr>
+  <tr><td class="feat">Automation sequences</td><td class="idc"><strong>Yes</strong> &mdash; multi-step welcome sequences with per-step delays, started when a reader confirms; pause and resume any time</td><td class="mk">Tier-gated</td><td class="mk">Paid plans</td><td class="mk">&#10003;</td><td class="mk">Add-on</td><td class="mk">&#10003;</td></tr>
+  <tr><td class="feat">Segmentation</td><td class="idc"><strong>Yes</strong> &mdash; rule-based segments over how readers joined and when, re-checked live at send time; tag rules arrive with contact tags</td><td class="mk">Standard +</td><td class="mk">&#10003;</td><td class="mk">&#10003;</td><td class="mk">Add-on</td><td class="mk">&#10003;</td></tr>
+  <tr><td class="feat">Templates &amp; editor</td><td class="idc"><strong>Yes</strong> &mdash; a dedicated editor page with autosaved drafts, four starter templates, live preview, and a Markdown block set</td><td class="mk">&#10003;</td><td class="mk">&#10003;</td><td class="mk">?</td><td class="mk">Markdown-first</td><td class="mk">&#10003;</td></tr>
+  <tr><td class="feat">In-issue polls</td><td class="idc"><strong>Yes</strong> &mdash; one poll per issue; each reader&rsquo;s copy carries their own vote link, one vote each, results live on the archive</td><td class="mk">?</td><td class="mk">?</td><td class="mk">?</td><td class="mk">?</td><td class="mk">?</td></tr>
   <tr><td class="feat">A/B testing</td><td class="idc"><strong>Missing</strong> &mdash; not built; at a few hundred subscribers the result would be mostly noise anyway</td><td class="mk">&#10003;</td><td class="mk">Paid plans</td><td class="mk">?</td><td class="mk">&mdash;</td><td class="mk">&#10003;</td></tr>
   <tr><td class="feat">REST API</td><td class="idc"><strong>Yes</strong> &mdash; every dashboard action, untiered; parity is a tested invariant</td><td class="mk">&#10003;</td><td class="mk">Pro plan</td><td class="mk">?</td><td class="mk">&#10003;</td><td class="mk">?</td></tr>
   <tr><td class="feat">MCP server &mdash; AI agents can drive it</td><td class="idc"><strong>Yes</strong> &mdash; every action a tool; send tools marked destructive, so an agent asks before it mails your list</td><td class="mk">?</td><td class="mk">Partial</td><td class="mk">Paid plans</td><td class="mk">?</td><td class="mk">?</td></tr>
@@ -277,9 +278,8 @@
     limit cell is its own pricing assumption &mdash; at most one email a
     day to the full list. And the <strong>$0 rows for beehiiv and
     Kit</strong> are real free plans, generously capped &mdash; with the
-    automation paywall standing exactly where our own
-    <em>Missing</em> stands: beehiiv&rsquo;s free plan has no automations
-    at all, and neither does Kit&rsquo;s.</p>
+    automation paywall behind them: beehiiv&rsquo;s free plan has no
+    automations at all, and neither does Kit&rsquo;s.</p>
     <p>What a chart can&rsquo;t show: the safety rails. Vizsla Post sends
     a new list in steps, pauses itself past 2.5% hard bounces or 0.08%
     complaints, checks its suppression list before every send and every
@@ -305,9 +305,12 @@
     of sending service behind one shape, and switching is a settings
     change, not a migration:</p>
     <ul>
-      <li><strong>Microsoft 365</strong> &mdash; a named preset that sends
-      as your own business mailbox. The Vizsla OS list sends this way:
-      zero added cost, sized for real lists.</li>
+      <li><strong>Microsoft 365</strong> &mdash; a named preset for sending
+      as your own business mailbox. Its OAuth2 sign-in is built, but
+      sending through it is still switched off: the first live send waits
+      on registering the app in our Microsoft account, a sitting we
+      haven&rsquo;t had yet. Zero added cost once it&rsquo;s on, sized
+      for real lists.</li>
       <li><strong>Amazon SES</strong> &mdash; the bulk truck, at roughly a
       dime per thousand emails, when a list outgrows a mailbox.</li>
       <li><strong>PostShiba</strong> &mdash; a sending service with a slot
